@@ -1,0 +1,2920 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%9B%BE/">
+      
+      
+        <link rel="next" href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B9%9D%E7%AB%A0%20%E6%9F%A5%E6%89%BE/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>数据结构——第八章 排序 - 简历</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="简历" class="md-header__button md-logo" aria-label="简历" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            简历
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数据结构——第八章 排序
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="简历" class="md-nav__button md-logo" aria-label="简历" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    简历
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    STL库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            STL库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/sort%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sort自定义排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94iterator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—iterator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库——set容器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            数论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/%E9%9C%8D%E7%BA%B3%E6%B3%95%E5%88%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多项式求值——霍纳法则(Horner's rule)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高斯消元法—求解线性方程组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    可持久化数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    刷题记录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            刷题记录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/PAT%E5%88%B7%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PAT刷题记录（1-16）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学建模
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学建模
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    评价模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            评价模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    层次分析法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/TOPSIS%E6%B3%95%EF%BC%88%E4%BC%98%E5%8A%A3%E8%A7%A3%E8%B7%9D%E7%A6%BB%E6%B3%95%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TOPSIS法（优劣解距离法）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    回归模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            回归模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    回归分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    回归评价指标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    聚类模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            聚类模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    几种聚类模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    排队论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            排队论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    排队论模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据挖掘
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据挖掘
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网络爬虫
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            网络爬虫
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络爬虫基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    机器学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    神经网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            神经网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    神经网络——基本理论文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/MLPRegressor%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLPRegressor 神经网络搭建
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    随机森林
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            随机森林
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%8F%92%E5%80%BC%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机森林插值分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90%EF%BC%88R%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机森林预测分析（R）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    专业课
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            专业课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第一章 概论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第二章 线性表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第三章 栈和队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E4%B8%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第四章 串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E6%95%B0%E7%BB%84%E3%80%81%E7%9F%A9%E9%98%B5%E4%B8%8E%E5%B9%BF%E4%B9%89%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第五章 数组、矩阵与广义表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第六章 树与二叉树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%9B%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第七章 图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    数据结构——第八章 排序
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第八章 排序
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 排序的基本概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 排序的基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 插入类排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 插入类排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 直接插入排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 折半插入排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.希尔排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.交换类排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.交换类排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 起泡排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 快速排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.选择类排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.选择类排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 简单选择排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 堆排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 二路归并排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 基数排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 外部排序
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B9%9D%E7%AB%A0%20%E6%9F%A5%E6%89%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第九章 查找
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成原理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成原理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第一章 计算机系统概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第二章 数据的表示和运算
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第三章 存储系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第四章 指令系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    项目技术栈
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            项目技术栈
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    航空旅客付费选座意愿识别
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            航空旅客付费选座意愿识别
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E8%88%AA%E7%A9%BA%E6%97%85%E5%AE%A2%E4%BB%98%E8%B4%B9%E9%80%89%E5%BA%A7%E6%84%8F%E6%84%BF%E8%AF%86%E5%88%AB/%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一、项目分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E8%88%AA%E7%A9%BA%E6%97%85%E5%AE%A2%E4%BB%98%E8%B4%B9%E9%80%89%E5%BA%A7%E6%84%8F%E6%84%BF%E8%AF%86%E5%88%AB/%E8%AF%A6%E7%BB%86%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二、详细方案
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    股市板块多序列预测
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            股市板块多序列预测
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/LSTM%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94%E8%82%A1%E5%B8%82%E6%9D%BF%E5%9D%97%E5%A4%9A%E5%BA%8F%E5%88%97%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    详细方案 (LSTM神经网络)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    岩石荧光区域分割
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            岩石荧光区域分割
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E5%B2%A9%E7%9F%B3%E8%8D%A7%E5%85%89%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2/%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一、项目分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E5%B2%A9%E7%9F%B3%E8%8D%A7%E5%85%89%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2/%E8%AF%A6%E7%BB%86%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二、详细方案
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    涉疫地面自动提取
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            涉疫地面自动提取
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E5%9F%BA%E4%BA%8EBi-LSTM-CRF%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB%E6%B6%89%E7%96%AB%E5%9C%B0%E5%90%8D%E8%87%AA%E5%8A%A8%E6%8F%90%E5%8F%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    详细方案（Bi-LSTM-CRF）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 排序的基本概念
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 排序的基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 插入类排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 插入类排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 直接插入排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 折半插入排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.希尔排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.交换类排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.交换类排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 起泡排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 快速排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.选择类排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.选择类排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 简单选择排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 堆排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 二路归并排序
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 基数排序
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5 外部排序
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">数据结构——第八章 排序</h1>
+<h3 id="1">1. 排序的基本概念</h3>
+<h5 id="11">1.1 排序</h5>
+<p>​   所谓排序，即将原本无序的序列重新排序成有续序列过程。</p>
+<ul>
+<li><strong>稳定性：</strong>指当待排序序列中有两个或两个以上相同的关键字时，排序前和排序后这些关系的相对位置，如果没有发生变化就是稳定，否则就是不稳定。（例如：两个关键字都是50，用50（a）和50（b）来区分，用某种算法A对其排序，排序前50(a)在50(b)之前，如果排序后50(a)仍然在50(b)之前，则A稳定；若排序后在50(a)在50(b)之后，那么A是不稳定的）。</li>
+</ul>
+<p>关键字不重复，那么排序结果唯一，那么选择排序算法稳定与否无关紧要；如果关键字可以重复，那么选择排序算法时就需要考虑选择稳定还是不稳定的算法；</p>
+<ul>
+<li>
+<p><strong>排序算法分类：</strong></p>
+</li>
+<li>
+<p><strong>插入类排序：</strong>在已有序的序列中，插入一个新的关键字。如：<strong>直接插入排序</strong>、<strong>折半插入排序</strong>、<strong>希尔排序</strong>。</p>
+</li>
+<li><strong>交换类排序：</strong>每一趟排序，都通过一系列的“交换”动作，让关键字排到它最终的位置上。如：<strong>起泡排序</strong>、<strong>快速排序</strong>。</li>
+<li><strong>选择类排序：</strong>将两个或两个以上的有序序列合并成一个新的有序序列。</li>
+<li><strong>基数类排序：</strong>基数类排序是基于多关键字排序的思想，把一个逻辑关键字拆分成多个关键字。</li>
+</ul>
+<h3 id="2">2. 插入类排序</h3>
+<h5 id="21">2.1 直接插入排序</h5>
+<p><img alt="" src="https://i.loli.net/2021/05/12/czB9Memq5HwCvAT.jpg" /></p>
+<p><strong>代码实现：</strong></p>
+<pre><code class="language-c++">void InsertSort(int R[],int n)
+{
+  int i,j;
+  int tmp;
+  for(i=1;i&lt;n;i++)
+  {
+    tmp=a[i];
+    for(j=i-1;j&gt;=0&amp;&amp;a[j]&gt;tmp;j--)
+    {
+      a[j+1]=a[j];
+    }
+    a[j]=tmp;
+  }
+}
+</code></pre>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li>该算法共两层循环</li>
+</ul>
+<p>第一层从第二个元素向后遍历至最后一个元素；</p>
+<p>第二层从当前位置向前遍历直至找到最合适的插入位置。</p>
+<ul>
+<li>时间复杂度：</li>
+</ul>
+<p>​    考虑最坏情况，整个序列都是逆序，则循环中<code>a[j]&gt;tmp</code>条件始终成立。此时对于每一层内层循环，基本操作总执行次数为<code>n(n-1)/2</code>，可以看出时间复杂度为<code>O(n^2)</code>；</p>
+<ul>
+<li>空间复杂度：</li>
+</ul>
+<p>算法辅助空间不存在随待排序规模的变化而变化，是个常量，因此空间复杂度为<code>O(1)</code>。</p>
+<h5 id="22">2.2 折半插入排序</h5>
+<p><img alt="" src="https://i.loli.net/2021/05/12/e3ohTDSgLOfGK9P.png" /></p>
+<p>代码实现：</p>
+<pre><code class="language-c++">void BinaryInserSort(int *a,int n)
+{
+  for(int i=0;i&lt;n;i++)
+  {
+    int temp=a[i];
+    int right=0;
+    while(left&lt;=right)
+    {
+      int mid = (left+right)/2;
+      if(a[min]&gt;temp) right =mid-1;
+      else left= mid+1;
+    }
+
+    for(int j=i-1;j&gt;=left;j--)
+      a[j+1]=a[j];
+    a[left]=temp;
+  }
+}
+</code></pre>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li><strong>时间复杂度分析：</strong></li>
+</ul>
+<p>折半插入排序适合关键字较多的场景，与直接插入排序相比，折半排序在查找插入位置上所花时间大大减少。由于关键字移动次数方面和直接排序一样，所以时间复杂度最好情况下是<code>O(nlog2n)</code>，最差情况是<code>O(n^2)</code>,平均情况为<code>O(n^2)</code>。</p>
+<ul>
+<li><strong>空间复杂度分析：</strong></li>
+</ul>
+<p>为<code>O(1)</code>。</p>
+<h5 id="23">2.3.希尔排序</h5>
+<p>​   希尔排序又叫缩小增量排序。将待排序的序列按某种规则分成几个子序列，非别对这几个子序列进行直接插入排序。</p>
+<p>​   这个规则体现的就是增量的选取，若增量为1，就是直接插入排序；若增量为5，即将下标为0、5、10、15...的关键字分成一组，将下标为1、6、11、16...分为一组，然后分别对这些组进行直接插入排序，这就是一趟希尔排序。</p>
+<p>​   接着再以增量2分割，下标为0、2、4、6...关键字分为一组，下标为1、3、5、7...分为一组。然后进行直接插入排序。则又完成了一趟希尔排序。</p>
+<p>​   增量按照5、2、1是逐渐缩小对，这就是缩小增量排序的由来。与直接排序进行比较，直接排序适合于序列基本有序的情况，希尔排序<strong>每趟都会使整个序列更加有序，等整个序列基本有序的再来一趟直接排序，这样会使得排序效率更高。</strong></p>
+<p><img alt="3" src="https://i.loli.net/2021/05/16/dxa3qjOYEUQgc4C.jpg" /></p>
+<pre><code class="language-c++">void ShellSort(int *a ,int n)
+{
+  int tmp,gap,k;
+  for(gap=n/2;gap&gt;0;gap/=2)
+  {
+    for(int i=0;i&lt;gap;i++)
+    {
+      for(int j=i+gap;j&lt;n;j+=gap)
+      {
+        tep=a[j];
+        for(k=j-gap;k&gt;=0&amp;&amp;a[k]&gt;tmp;k-=gap)
+        {
+          a[k+gap]=a[gap];
+        }
+        a[k]=tmp;
+      }
+    }
+  }
+}
+</code></pre>
+<p>希尔排序是不稳定的。</p>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li>
+<p><strong>时间复杂度分析：</strong>希尔排序时间复杂度和增量有关，希尔排序的增量选取规则很多，在考研中增量选取规则有以下两种：</p>
+</li>
+<li>
+<p>希尔（Shell）自己提出的：
+    $$
+    \left\lfloor n/2\right\rfloor  、\left\lfloor n/4\right\rfloor 、...、\left\lfloor n/2^k\right\rfloor 、2、1
+    $$
+    每次讲增量除以2并向下取整，其中n为序列长度、此时时间复杂度为<code>O(n^2)</code>;</p>
+</li>
+<li>
+<p>帕佩尔诺夫和斯塔舍维奇提出的：
+    $$
+    2^k+1、...、65、33、17、9、5、3、1
+    $$
+    其中，k为大于等于1的整数，2<sup>k</sup>+1小于待排序列长度，增量序列末尾的1是额外添加的，此时复杂度为O(n<sup>1.5</sup>);</p>
+</li>
+</ul>
+<blockquote>
+<p>​    希尔排序时间复杂度分析过程十分复杂，因此考研中涉及分析过程的题目只需记住上述两个常见结果即可：</p>
+<p>​    希尔排序的一个考点：</p>
+<p>​        请回答希尔排序增量选取时需要注意的地方：</p>
+<p>答：</p>
+<pre><code>    * 增量序列的最后一个值一定取1；
+    * 增量序列中的值应尽量没有除1以外的公因子；
+</code></pre>
+</blockquote>
+<ul>
+<li><strong>空间复杂度分析：</strong></li>
+</ul>
+<p>同插入排序一样为O(1);</p>
+<h3 id="3">3.交换类排序</h3>
+<h5 id="31">3.1 起泡排序</h5>
+<p>​   起泡排序又称为冒泡排序，它是通过一系列“交换”动作完成，通过比较第一和第二个关键字，若第一个较大，则两者交换，否则不交换；然后第二个关键字和第三个关键字比较，同样通过判断来决定是否进行比较......。</p>
+<p>​   最终最大的那个关键字被交换到了最后，一趟起泡排序完成。经过多趟这样的排序，最终使得整个序列有序。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/16/ndcS8kO3WwVUu7B.jpg" /></p>
+<pre><code class="language-c++">void BulleSord(int *a ,int n)
+{
+  bool flag=FALSE;
+  for(int i=0;i&lt;N-1;i++)
+  {
+    for(int j=0;j&lt;N-1-i;j++)
+    {
+      if(a[j]&gt;a[j+1])
+      {
+        int temp;
+        temp =a[j];
+        a[j]=a[j+1];
+        a[j+1]=temp;
+        flag=TRUE;
+      }
+    }
+    if(!flag) break;
+   }
+}
+</code></pre>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li><strong>时间复杂度分析：</strong></li>
+</ul>
+<p>由起泡排序算法代码知，可选取最内层循环中的关键字交换操作作为基本操作。</p>
+<ul>
+<li>最坏情况下，待排序为逆序列。此时对于外层循环每次执行，内层循环中if语句的条件为<code>R[j]&lt;R[j-1]</code>始终成立，即基本操作执行次数为n-i。i取值为<code>1～n-i</code>。因此，基本操作总执行次数为<code>(n-1+1)(n-1)/2=n(n-1)/2</code>,由此可见时间复杂度为<span class="arithmatex">\(O(n^2)\)</span>;</li>
+<li>
+<p>最好情况，待排序为有序序列，此时内层循环中if语句条件始终不成立，交换不发生，且内层循环执行n-1次后，整个算法结束，可见时间复杂度为O(n);</p>
+</li>
+<li>
+<p><strong>空间复杂度分析：</strong></p>
+</li>
+</ul>
+<p>额外补助空间只有一个temp，因此空间复杂度为O(1);</p>
+<h5 id="32">3.2 快速排序</h5>
+<p>​   快速排序通过多次划分操作实现排序。以升序为例，其执行流程可以概括为：每一趟选择当前子序列中的关键字（通常为第一个）作为枢轴，将子序列中比枢轴小的移到枢轴前面，比枢轴大的移到枢轴后面。当本趟所有子序列都被枢轴以上述规则划分完毕后会得到新的更短的子序列，它们成为下一趟初始序列集。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/16/STLHdICiD6soFAY.jpg" /></p>
+<pre><code class="language-c++">void quicksort(int *a,int l,int r)
+{
+  if(l&lt;r)
+  {
+    int i,j,x;
+    i=l;
+    j=r;
+    x=a[i];
+    while(i&lt;l)
+    {
+      while(i&lt;j&amp;&amp;a[j]&gt;x)
+        j--;
+      if(i&lt;j)
+        a[i++]=a[j];
+      while(i&lt;j&amp;&amp;a[j]&lt;x) a[i]=1;
+        i++;
+      if(i&lt;j)
+        a[j--]=a[i];
+    }
+    a[i]=x;
+    quicksort(a,l,i-1);
+    quicksort(a,i+1,r);
+  }
+}
+</code></pre>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li><strong>时间复杂度分析：</strong></li>
+</ul>
+<p>​    快速排序最好情况下时间复杂度为O(nlog<sub>2</sub>n),待排序越接近无序，本算法效率越高。最坏情况下时间复杂度为O(n<sup>2</sup>),待排序序列越接近有序，本算法效率越低。平均情况下时间复杂度为O(nlog<sub>2</sub>n)。</p>
+<p>快速排序的排序趟数和初始序列有关。</p>
+<ul>
+<li><strong>空间复杂度分析：</strong></li>
+</ul>
+<p>​    本算法的空间复杂度为O(log<sub>2</sub>n)。快速排序是递归进行的，递归需要辅助栈，因此需要辅助空间比前面几类排序算法大。</p>
+<h3 id="4">4.选择类排序</h3>
+<h5 id="41">4.1 简单选择排序</h5>
+<p>​    选择排序的主要动作是“选择”，简单选择排序采用最简单的选择方式，从头至尾顺序扫描序列，找出最小的一个关键字，和第一个关键字交换，接着从剩下关键字中继续这种选择和交换，最终使序列有序。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/16/H13s7zPYyhvtAq6.jpg" /> </p>
+<pre><code class="language-c++">void SelectSort(int *a,int n)
+{
+  for(int i=0;i&lt;n-1;i++)
+  {
+    int min = i;
+    for(int j=i+1;j&lt;n;j++)
+      if(a[j]&lt;a[min])
+        min=j;
+    int temp;
+    temp=a[i];a[i]=a[j];a[j]=temp;
+  }
+}
+</code></pre>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li><strong>时间复杂度分析：</strong></li>
+</ul>
+<p>​    通过本算法代码可以看出，两层循环执行次数和初始序列没有关系，外层循环执行n次，内层循环执行n-1次，将最内层循环中的比较操作视为关键操作，其执行次数为<code>(n-1+1)(n-1)/2=n(n-1)/2</code>,即时间复杂度为O(n<sup>2</sup>)。</p>
+<ul>
+<li><strong>空间复杂度分析：</strong></li>
+</ul>
+<p>空间复杂度为O(1)。</p>
+<h5 id="42">4.2 堆排序</h5>
+<p>​   堆是一组数据结构，可以把堆看成一棵完全二叉树，这颗完全二叉树满足：任何一个非叶结点的值都不大于（或不小于）其左孩子结点的值。若父亲大孩子小，则这样的堆叫作大顶堆；若父亲小孩子大，这样的堆叫作小顶堆。</p>
+<p>​   根据堆堆定义知，代表堆堆这颗完全二叉树的根结点的值是最大（或最小）的，因此将一个无序序列调整为一个堆，就可以找出这个序列的最大（或最小）值，然后将找出的这个值交换到序列的最后（或最前），这样，有序序列关键字增加1个，无序序列的关键字减少1个，对新的无序序列重复这样的操作，就实现了排序。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/16/1Q5KnXZC8JeyGB4.jpg" /></p>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li><strong>时间复杂度分析：</strong></li>
+</ul>
+<p>​    整个算法基本操作的次数为<span class="arithmatex">\(O(log_2n)\times n/2+O(log_2n)\times (n-1)\)</span>,化简后其时间复杂度为<span class="arithmatex">\(O(nlog_2n)\)</span>。</p>
+<ul>
+<li><strong>空间复杂度分析：</strong></li>
+</ul>
+<p>​    空间复杂度为O(1);</p>
+<h5 id="43">4.3 二路归并排序</h5>
+<p><strong>算法流程：</strong></p>
+<p>原始序列：49、38、65、97、76、13、27。</p>
+<p>1）将原始序列看成7个只含有一个关键字的子序列，显然子序列都是有序的。</p>
+<p>子序列1：49；</p>
+<p>子序列2：38；</p>
+<p>子序列3：65；</p>
+<p>子序列4：97；</p>
+<p>子序列5：76；</p>
+<p>子序列6：13；</p>
+<p>子序列7：27；</p>
+<p>2）两两归并，形成若干有序二元组，即49和38归并{38 49},65和97归并{65 97},76和13归并{13 76},27没有归并对象，保持原样。得到第一趟归并结果如下：</p>
+<center>{38 49}、{65 97}、{13 76}、{27}</center>
+
+<p>3)再将这个序列看成若干有序二元组：</p>
+<p>​       子序列1：{38 49}；</p>
+<p>​       子序列2：{65 97}；</p>
+<p>​       子序列3：{13 76}；</p>
+<p>​       子序列4：{27}；</p>
+<p>4)继续两两归并，形成若干有序四元组。即{38 49}和{65 97}归并成{38 49 65 97};{13 76}和{27}归并形成{13 27 76};得到第二趟归并排序的结果如下：</p>
+<p>​       子序列1：{38 49 65 97};</p>
+<p>​       子序列2：{13 27 76}；</p>
+<p>5)最后，只有两个子序列，最终再进行一次排序就完成整个二路排序：</p>
+<center>{13 27 38 49 65 76 97}</center>
+
+<p><strong>代码实现：</strong></p>
+<pre><code class="language-c++">void merge(int a[],int l,int r,int mid)
+{
+  int aux[r-l+1],i,j,k;
+
+  for(k=l;k&lt;=r;k++)
+  aux[k-l]=a[k];
+  i=l;
+  j=mid+1;
+  for(k=l;k&lt;=r;k++)
+  {
+      if(i&gt;mid)
+      {
+        a[k]=aux[j-l];
+        j++;
+      }
+      else if(j&gt;r)
+      {
+        a[k]=aux[i-l];
+        i++;
+      }
+      else if(aux[i-l]&gt;aux[j-l])
+      {
+        a[k]=aux[j-l];
+        j++;
+       }
+      else
+      {
+        a[k]=aux[i-l];
+        i++;
+      }
+     }  
+}
+void merge_sort(int a[],int l,int r)
+{
+  if(l&gt;=r)
+    return ;
+
+    int mid=(l+r)/2;
+
+    merge_sort(a,l,mid);//归并排序前半段
+    merge_sort(a,mid+1,r);//归并排序后半段
+    merge(a,l,r,mid);   //把两段有序数组归并成一段有序序列
+
+}
+void mergesort(int a[],int l,int r)
+{
+    merge_sort(a,l,r-1);
+}
+</code></pre>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li>
+<p><strong>时间复杂度分析：</strong>归并排序可取函数<code>merge()</code>内的“归并操作”作为基本操作。在顺序表中，函数<code>merge()</code>的“归并操作”执行次数为要归并的两个子序列中关键字个数之和，由整个排序过程可知：</p>
+</li>
+<li>
+<p><strong>第1趟</strong>：需要执行<code>2×(n/2)=n</code>次基本操作；</p>
+</li>
+<li><strong>第2趟</strong>：需要执行<code>4×(n/4)=n</code>次基本操作；</li>
+<li><strong>第3趟</strong>：需要执行<code>8×(n/8)=n</code>次基本操作；</li>
+<li>...</li>
+<li><strong>第n趟</strong>：需要执行<span class="arithmatex">\(2^k×(n/2^k)=n\)</span>次基本操作；</li>
+</ul>
+<p>当<span class="arithmatex">\(n/2^2=1\)</span>时，即需要归并两个子序列长度均为原序列的一半。因此整个归并排序中总基本操作执行次数为<span class="arithmatex">\(nlog_2n\)</span>，时间复杂度为<span class="arithmatex">\(O(nlog_2n)\)</span>。</p>
+<ul>
+<li><strong>空间复杂度分析：</strong></li>
+</ul>
+<p>空间复杂度为<span class="arithmatex">\(O(n)\)</span>。</p>
+<h5 id="44">4.4 基数排序</h5>
+<p><strong>基本概念</strong></p>
+<p>​   基数排序的思想是“<strong>多关键字排序</strong>”。基数排序有两种实现方式：</p>
+<ul>
+<li><strong>最高位优先</strong>：按最高位排成若干子序列，再对每个子序列按次高位排序；</li>
+<li><strong>最低位优先</strong>：这种方式不必分成子序列，每次排序全体关键字都参与。最低位可以优先这样进行，不通过比较，而是通过“分配”和“收集”。</li>
+</ul>
+<p><strong>算法流程</strong></p>
+<p>​   初始桶如图所示</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/pwXGstSuZf7inBE.png" /></p>
+<p>初始序列为：<strong>278 109 063 930 589 184 505 269 008 083</strong></p>
+<p>每个关键字的每一位是由“数字”组成的，数字的范围0～9，所以准备10个桶来放关键字。（要注意的是，组成关键字的每一位不一定是数字。）</p>
+<p>（1）进行第一趟分配和收集，要按照最后一位。</p>
+<p>​           ①分配过程如下</p>
+<p>​                   278的最低是8，放到桶8中。<img alt="" src="https://i.loli.net/2021/05/18/J65OhXMLUsgoHA8.png" /></p>
+<p>​                   109的最低位是9，放到桶9中。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/rT2m8S7wYj3ZRNE.png" /></p>
+<p>​                   按照这样的方法，依次（按原始序列顺序）将原始序列的每个数放到对应的桶中。第一趟分配过程如下</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/qVjkup3gsTC27G1.png" /></p>
+<p>​           ②收集过程是这样：按桶0到桶9的顺序收集，注意关键字从桶下面出。</p>
+<p>​                   桶0：930；</p>
+<p>​                   桶1：没关键字，不收集；</p>
+<p>​                   桶2：没关键字，不收集；</p>
+<p>​                   桶3：063，083；</p>
+<p>​                                   ...</p>
+<p>​                   桶8：278，008；</p>
+<p>​                   桶9：109，589，269；</p>
+<p>将每桶收集的关键字依次排开，所以第一趟收集后的结果为：</p>
+<center>930、063、083、184、505、278、008、109、589、269</center>
+
+<p>注意观察，最低位有序了，这就是第一趟基数排序后的结果。</p>
+<p>（2）在第一趟排序结果的基础上，进行第二趟分配和收集，这次按照中间位。</p>
+<p>​           ①第二趟分配过程如下。</p>
+<p>​                   930的中间位是3，放到桶3中。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/HVhEaNeTlsin3UY.png" /></p>
+<p>​                    063的中间位是6，放桶6中。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/FCgebEUQfNd3l4L.png" /></p>
+<p>​                    按照同样的方法，将其余关键字依次入桶。</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/y5qmzcORLTQ4hen.png" /></p>
+<p>​           ②进行第二趟收集</p>
+<p>​                   桶0：505、008、109；</p>
+<p>​                   桶1：没关键字，不收集；</p>
+<p>​                   桶2：没关键字，不收集；</p>
+<p>​                   桶3：930；</p>
+<p>​                                   ...</p>
+<p>​                   桶8：083、184、589；</p>
+<p>​                   桶9：没关键字，不收集；</p>
+<p>第二趟收集结果为：</p>
+<center>505、008、109、930、063、269、278、083、184、589</center>
+
+<p>​   此时中间位有序了，并且中间位相同的那些关键字，其最低位也是有序的，第二趟基数排序结束。</p>
+<p>（2）在第二趟排序结果的基础上，进行第三趟分配和收集，这次按照最高位。</p>
+<p>​           ①第三趟分配过程如下。</p>
+<p>​                   505的最高位是5，放到桶5中；</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/YAeEVvOozW3KSZ6.png" /></p>
+<p>​                   008最高位是0，放到桶0中；         <img alt="" src="https://i.loli.net/2021/05/18/zcEPBYLkt5ox4Wu.png" /></p>
+<p>​           按同样的方法，将其余关键字依次入桶，结果如下：</p>
+<p><img alt="" src="https://i.loli.net/2021/05/18/3hmB1xySOJiNp8a.png" /></p>
+<p>​               ②第三趟收集结果为：</p>
+<center>008、063、083、109、184、269、178、505、589、930</center>
+
+<p>​   于是整个序列有序，基数排序过程结束。</p>
+<p><strong>算法分析：</strong></p>
+<ul>
+<li><strong>时间复杂度分析：</strong>平均和最坏情况下都是<span class="arithmatex">\(O(d(n+r_d))\)</span>;</li>
+<li><strong>空间复杂度分析：</strong><span class="arithmatex">\(O(r_d)\)</span>;</li>
+</ul>
+<p>​        基数排序适合场景是序列中关键字很多，但组成关键字取值范围很小，如数字0～9是可以接受的。如果关键字取值范围很大，如26个字母，并且序列中大多数关键字的最高位关键字都不相同，那么这时可以考虑使用“最高位优先法”，先根据最高位排成若干子序列，然后分别对这些子序列进行直接插入排序。</p>
+<h3 id="5">5 外部排序</h3>
+<p>外部排序是<strong>选择排序</strong>的一种。</p>
+<p><strong>基本概念</strong></p>
+<p>​   外部排序即对<strong>外存中的记录进行排序</strong>（相对于内部排序而言）。概括为一句话：<strong>将内存作为工作空间来辅助外存数据的排序。</strong></p>
+<p><strong>算法流程</strong></p>
+<p>​   外部排序最常用的算法是<strong>归并排序</strong>。因为归并排序不需要将全部记录都读入内存即可完成排序，这可以解决由于内存空间不足导致的无法对大规模记录排序问题。</p>
+<p>​   假设要对外存中的一组大规模无序记录进行归并排序，可按照如下步骤：</p>
+<p>​   ①将这组记录假设为n个，分为m个规模较小的记录段（记录段长度不一定相等），并对这些小段记录段哦排序。一般情况下记录段都足够小，可以整段度入内存并选择合适的排序算法对其排序。</p>
+<p>​   ②将这m个有序记录段每k段分为一组，得到$\left\lceil m/k\right\rceil  $组记录段。取其中一组（如下图），每行一段，将每段段首段记录读入内存中，如灰色部分，</p>
+<p><img src="https://i.loli.net/2021/05/18/OZtCPFYVAc9T6iX.png" style="zoom: 67%;" /></p>
+<p>​   ③用某种算法从读入内存的这组记录中选出最小的，如图</p>
+<p><img src="https://i.loli.net/2021/05/18/t1zQYaP5gWjqx9i.png" style="zoom:67%;" /></p>
+<p>​   ④将上一步中选出最小值写回外存，并将其所在记录段的次小值读入内存以补上空位置</p>
+<p><img src="https://i.loli.net/2021/05/18/7CGD2o1ydhwRcTU.png" style="zoom:67%;" /></p>
+<p>​   ⑤重复上述过程</p>
+<p><img src="https://i.loli.net/2021/05/18/fKRYW5pxiBq24Vc.png" style="zoom:67%;" /></p>
+<p>​   ⑥当此组记录全部导出后，就会在外存中得到一个较长的有序记录。整个过程只用了k个内存空间，达到了用较小的内存空间完成较大规模记录排序的目的。</p>
+<p>（上边算法称为k路归并排序算法，如果k等于2，就是我们熟悉的二路归并排序算法的外存版）</p>
+<p><strong>重要子算法</strong></p>
+<ul>
+<li><strong>置换-选择排序</strong>：上边步骤①中的m个有序记录段称为<strong>初始归并段</strong>。如果被划分的每个小记录段规模不够小，依然无法完全读入内存，则无法用内排序得到初始归并段，因此需要一种适用于初始归并段规模的、高效的且不受内存空间限制的排序算法，即<strong>置换-选择排序</strong>；</li>
+<li><strong>最佳归并树</strong>：将当前m组（每组含有k个有序记录段）记录归并为m个有序记录段的过程称为一趟归并，可见每个记录在每趟归并中需要两次I/O操作（读写操作各一次）。读写操作是非常耗时的，可见减少归并次数可以提高效率。为了使得归并次数最少，需要用到<strong>最佳归并树</strong>；</li>
+<li><strong>败者树</strong>：归并算法中有一个多次出现的步骤，就是从当前k个值中用某种算法选出最值，可见提高最值的效率也是整个归并排序算法中的关键，这就需要用到败者树。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

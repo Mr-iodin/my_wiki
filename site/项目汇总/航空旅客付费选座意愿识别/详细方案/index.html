@@ -1,0 +1,3649 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/">
+      
+      
+        <link rel="next" href="../../LSTM%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94%E8%82%A1%E5%B8%82%E6%9D%BF%E5%9D%97%E5%A4%9A%E5%BA%8F%E5%88%97%E9%A2%84%E6%B5%8B/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>二、详细方案 - 简历</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="简历" class="md-header__button md-logo" aria-label="简历" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            简历
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              二、详细方案
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="简历" class="md-nav__button md-logo" aria-label="简历" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    简历
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    STL库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            STL库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../STL%E5%BA%93/sort%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sort自定义排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94iterator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—iterator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库——set容器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            数论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%AE%97%E6%B3%95/%E9%9C%8D%E7%BA%B3%E6%B3%95%E5%88%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多项式求值——霍纳法则(Horner's rule)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%AE%97%E6%B3%95/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高斯消元法—求解线性方程组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%AE%97%E6%B3%95/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    可持久化数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    刷题记录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            刷题记录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%AE%97%E6%B3%95/PAT%E5%88%B7%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PAT刷题记录（1-16）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学建模
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学建模
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    评价模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            评价模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    层次分析法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/TOPSIS%E6%B3%95%EF%BC%88%E4%BC%98%E5%8A%A3%E8%A7%A3%E8%B7%9D%E7%A6%BB%E6%B3%95%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TOPSIS法（优劣解距离法）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    回归模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            回归模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    回归分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    回归评价指标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    聚类模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            聚类模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    几种聚类模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    排队论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            排队论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    排队论模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据挖掘
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据挖掘
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网络爬虫
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            网络爬虫
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络爬虫基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    机器学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    神经网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            神经网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    神经网络——基本理论文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/MLPRegressor%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLPRegressor 神经网络搭建
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    随机森林
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            随机森林
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%8F%92%E5%80%BC%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机森林插值分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90%EF%BC%88R%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机森林预测分析（R）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    专业课
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            专业课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第一章 概论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第二章 线性表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第三章 栈和队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E4%B8%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第四章 串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E6%95%B0%E7%BB%84%E3%80%81%E7%9F%A9%E9%98%B5%E4%B8%8E%E5%B9%BF%E4%B9%89%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第五章 数组、矩阵与广义表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第六章 树与二叉树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%9B%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第七章 图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E6%8E%92%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第八章 排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B9%9D%E7%AB%A0%20%E6%9F%A5%E6%89%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第九章 查找
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成原理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成原理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第一章 计算机系统概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第二章 数据的表示和运算
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第三章 存储系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第四章 指令系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    项目技术栈
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            项目技术栈
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    航空旅客付费选座意愿识别
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            航空旅客付费选座意愿识别
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一、项目分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    二、详细方案
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    二、详细方案
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.开发工具和环境介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.数据描述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.数据预处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.数据预处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1卡方检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 降维处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 降维处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 主成分分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 缺失值分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 缺失值分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 随机森林填补缺失值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-smote" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 SMOTE数据过采样
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 最终筛选出的因子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.分类模型算法介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.分类模型算法介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-randomforest" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 RandomForest
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 RandomForest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 决策树介绍
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 XGBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-catboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Catboost
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.模型调参过程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.模型调参过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 参数调优概念和方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 模型调参过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-randomforestclassifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 RandomForestClassifier参数调优过程与结果
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 XGBoost参数调优过程与结果
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-catboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Catboost参数调优过程及结果
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.模型融合
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.预测结果评估
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.结语
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    股市板块多序列预测
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            股市板块多序列预测
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LSTM%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94%E8%82%A1%E5%B8%82%E6%9D%BF%E5%9D%97%E5%A4%9A%E5%BA%8F%E5%88%97%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    详细方案 (LSTM神经网络)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    岩石荧光区域分割
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            岩石荧光区域分割
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%B2%A9%E7%9F%B3%E8%8D%A7%E5%85%89%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2/%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一、项目分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%B2%A9%E7%9F%B3%E8%8D%A7%E5%85%89%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2/%E8%AF%A6%E7%BB%86%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二、详细方案
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    涉疫地面自动提取
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            涉疫地面自动提取
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9F%BA%E4%BA%8EBi-LSTM-CRF%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB%E6%B6%89%E7%96%AB%E5%9C%B0%E5%90%8D%E8%87%AA%E5%8A%A8%E6%8F%90%E5%8F%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    详细方案（Bi-LSTM-CRF）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.目的
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.开发工具和环境介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.数据描述
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.数据预处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.数据预处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1卡方检验
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 降维处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 降维处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 主成分分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 缺失值分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 缺失值分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 随机森林填补缺失值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-smote" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 SMOTE数据过采样
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 最终筛选出的因子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.分类模型算法介绍
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.分类模型算法介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-randomforest" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 RandomForest
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 RandomForest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 决策树介绍
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 XGBoost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-catboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Catboost
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.模型调参过程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.模型调参过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 参数调优概念和方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 模型调参过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-randomforestclassifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 RandomForestClassifier参数调优过程与结果
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-xgboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4 XGBoost参数调优过程与结果
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-catboost" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5 Catboost参数调优过程及结果
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.模型融合
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.预测结果评估
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.结语
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">二、详细方案</h1>
+<h3 id="1">1.背景</h3>
+<p>​         2014年国航率先在国际航线推出了付费选座的产品，一经推出便引发了社会的热议，随后国内各大航空公司相继跟进推出自己的选座产品。2015年各大航空公司进而将其拓展至国内航线，因此至今已经有很多航空公司都开始提供付费选座，在提供更好的服务时这也成为了航空公司的收入来源之一。</p>
+<h3 id="2">2.目的</h3>
+<p>​        一些旅客为舒适的旅程而有意愿且有能力支付心仪座位选作付费的就成为了付费选座的目标客户。为了识别出付费选座旅客，我们需要了解以及运用相关模型算法分析已购票旅客的出行目的以及付费选座的意愿和能力，构建出付费选座旅客的行为模型，为付费选座营销业务提供目标用户。</p>
+<h3 id="3">3.开发工具和环境介绍</h3>
+<p>本项目采用Jupyter的Python接口读取本题的数据，并且进行相应的处理。</p>
+<h3 id="4">4.数据描述</h3>
+<p>本题提供的数据共有650个特征因子，我们按照特征数据的一些特性将其分为以下八类：</p>
+<ul>
+<li>旅客个人基本信息：customers_basic；</li>
+<li>旅客当前所选择航班特征：pre_plant；</li>
+<li>旅客偏好出发到达地以及航线：pre_place；</li>
+<li>旅客偏好机型与座位特征：pre_cabin；</li>
+<li>旅客行为时间特征：pre_day；</li>
+<li>旅客行驶里程特征：customers_dist；</li>
+<li>机票消费特征：ticket；</li>
+<li>积分特征：amt；</li>
+</ul>
+<h3 id="5">5.数据预处理</h3>
+<h4 id="51">5.1卡方检验</h4>
+<p>数据初步筛选的思想为将两类数据中的比例进行比较，例如性别中若付费用户和男女比例和不付费用户的男女比例差异很大，则我们可以认为性别在某种程度上会决定旅客是否付费。</p>
+<p>结果将借助一种假设检验方法：卡方检验，假设有两个分类变量X和Y，它们的值域分别为{x1, x2}和{y1, y2}，其样本频数列联表为</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>y1</th>
+<th>y2</th>
+<th>总计</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1</td>
+<td>a</td>
+<td>b</td>
+<td>a+b</td>
+</tr>
+<tr>
+<td>x2</td>
+<td>c</td>
+<td>d</td>
+<td>c+d</td>
+</tr>
+<tr>
+<td>总计</td>
+<td>a+c</td>
+<td>b+d</td>
+<td>a+b+c+d</td>
+</tr>
+</tbody>
+</table>
+<p>提出原假设：H0 :X的分布与Y变量无关。</p>
+<p>推断的假设：H1：X的分布与Y变量有关。</p>
+<p>可以利用独立性检验来考察两个变量是否有关系，并且能较精确地给出这种判断的可靠程度。具体的做法是，由表中的数据算出检验统计量  的值，这个值越大则H1成立的可能性越大，本文取α = 0.05，当p值小于0.05时，拒绝原假设，即X与Y相关。</p>
+<p>运用这种检验方式初步得到以下因子：</p>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">说明</th>
+<th>卡方检验结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>age</td>
+<td style="text-align: left;">年龄段</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>pref_month</td>
+<td style="text-align: left;">常飞月份</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>flt_cnt</td>
+<td style="text-align: left;">最近Y年飞行次数</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>pref_orig</td>
+<td style="text-align: left;">出发地</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>pref_city</td>
+<td style="text-align: left;">出发地</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>pref_aircraft</td>
+<td style="text-align: left;">偏好机型</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>cabin_y_cnt</td>
+<td style="text-align: left;">最近Y年经济舱次数</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>seat_walkway_cnt</td>
+<td style="text-align: left;">座位走道的次数</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>pref_aircraft_y3_1</td>
+<td style="text-align: left;">偏好机型</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>pref_orig_y3_1</td>
+<td style="text-align: left;">偏好出发地</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>prebuy_i_cnt</td>
+<td style="text-align: left;">提前购买次数-国际</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>tkt_3y_amt</td>
+<td style="text-align: left;">Y年机票总消费</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>tkt_i_amt</td>
+<td style="text-align: left;">最近Y年机票金额-国际</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td>tkt_all_amt</td>
+<td style="text-align: left;">最近Y年机票总金额</td>
+<td>Dependent</td>
+</tr>
+<tr>
+<td><font color=\#808080>seg_cabin</font></td>
+<td style="text-align: left;"><font color=\#808080>舱位</font></td>
+<td><font color=\#808080>Dependent</font></td>
+</tr>
+<tr>
+<td><font color=\#808080>seg_flight</font></td>
+<td style="text-align: left;"><font color=\#808080>航班号</font></td>
+<td><font color=\#808080>Dependent</font></td>
+</tr>
+<tr>
+<td><font color=\#808080>seg_route_to</font></td>
+<td style="text-align: left;"><font color=\#808080>到达</font></td>
+<td><font color=\#808080>Dependent</font></td>
+</tr>
+</tbody>
+</table>
+<h4 id="52">5.2 降维处理</h4>
+<h5 id="521">5.2.1 主成分分析</h5>
+<p><strong>（1）基本思想以及方法：</strong></p>
+<p>设<span class="arithmatex">\(X_1,X_2,...,X_p\)</span>表示<span class="arithmatex">\(x_1,x_2,...,x_p\)</span>为样本观测值的随机变量，如果能找到<span class="arithmatex">\(c_1,c_2,...,c_p\)</span>，使得<span class="arithmatex">\(Var(c_1X_1+c_2X_2+...+c_pX_p)\)</span>的值达到最大，由于方差反映了数据差异的程度，因此也就表明了我们找到了这p个变量的最大变异。且我们通常规定：
+$$
+c_1^2+c_2^2+...+c_p^2 = 1
+$$</p>
+<p>而一个主成分不足以代表原来p个变量，因此需要寻找更多的主成分，并且第二个主成分中不应该包含第一个主成分的信息，也就是让这两个主成分的协方差为零。</p>
+<p>设<span class="arithmatex">\(Z_i\)</span>表示第<span class="arithmatex">\(i\)</span>个主成分，<span class="arithmatex">\(i=1,2,...,p\)</span>，可设 :</p>
+<p><img alt="" src="https://s2.loli.net/2022/03/08/AQOJEf2KyzGg39R.png" /></p>
+<p>其中对每一个<span class="arithmatex">\(i\)</span>,均有:</p>
+<p><img alt="" src="https://s2.loli.net/2022/03/08/CwWStc5Yxgfoa8Z.png" /></p>
+<p><strong>（2）主成分分析法的步骤</strong></p>
+<ol>
+<li>
+<p>对原始数据进行标准化；</p>
+</li>
+<li>
+<p>计算相关系数矩阵R ；</p>
+</li>
+<li>
+<p>计算特征值和特征向量：</p>
+</li>
+</ol>
+<p>​    计算相关系数矩阵R的特征值<span class="arithmatex">\(0\le\lambda_m \le...\le\lambda_2\le\lambda_1\)</span>,及其对应的特征向量<span class="arithmatex">\(u_1,u_2,...,u_m\)</span>,其中<span class="arithmatex">\(uj = (u_{1j},u_{2j},..,u_{mj})^T\)</span>,由特征向量组成m个新的指标变量：</p>
+<p><img alt="截屏2022-03-08 下午3.01.32.png" src="https://s2.loli.net/2022/03/08/WDF2GyfkwvEa3Nr.png" /></p>
+<p>式中<span class="arithmatex">\(y_1\)</span>是第一主成分，<span class="arithmatex">\(y_2\)</span>为第二主成分，...,<span class="arithmatex">\(y_m\)</span>为第<span class="arithmatex">\(m\)</span>主成分；</p>
+<ol>
+<li>
+<p>选择p个主成分，计算综合评价值：</p>
+</li>
+<li>
+<p>计算特征值的信息贡献率和累计贡献率；</p>
+</li>
+<li>
+<p>计算综合得分。</p>
+</li>
+<li>
+<p>最后选择累计贡献率达到80%左右的主成分。</p>
+</li>
+</ol>
+<p>针对机票、累计飞行距离以及出发地这三个有多种因子的特征，我们采用主成分分析的方法。</p>
+<p><strong>机票因子</strong></p>
+<p>​   在描述机票相关的定量变量中，去除空置率达到90%以上的数据得到以下因子：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">字段名_y3</th>
+<th style="text-align: center;">描述</th>
+<th style="text-align: center;">备注</th>
+<th>空值占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">tkt_3y_amt</td>
+<td style="text-align: center;">Y年机票总消费</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>60.8%</td>
+</tr>
+<tr>
+<td style="text-align: center;">tkt_d_amt</td>
+<td style="text-align: center;">最近Y年机票金额-国内</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>89.8%</td>
+</tr>
+<tr>
+<td style="text-align: center;">tkt_i_amt</td>
+<td style="text-align: center;">最近Y年机票金额-国际</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>67.0%</td>
+</tr>
+<tr>
+<td style="text-align: center;">tkt_all_amt</td>
+<td style="text-align: center;">最近Y年机票总金额</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>66.8%</td>
+</tr>
+<tr>
+<td style="text-align: center;">tkt_avg_amt</td>
+<td style="text-align: center;">最近Y年平均机票金额</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>66.8%</td>
+</tr>
+<tr>
+<td style="text-align: center;">tkt_book_cnt</td>
+<td style="text-align: center;">最近Y年总的订票次数</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>88.6%</td>
+</tr>
+</tbody>
+</table>
+<p>相关性分析：</p>
+<p><img alt="" src="https://i.loli.net/2021/04/21/cCM9lgXmxeJLupn.png" /></p>
+<p>6种因子相互间的相关性较强，采用pca进行降维：</p>
+<pre><code>相关系数矩阵为：                 tkt_3y_amt  tkt_d_amt_y3  tkt_i_amt_y3  tkt_all_amt_y3  \
+tkt_3y_amt         1.000000      0.185486      0.132240        0.164386   
+tkt_d_amt_y3       0.185486      1.000000      0.281258        0.495510   
+tkt_i_amt_y3       0.132240      0.281258      1.000000        0.972905   
+tkt_all_amt_y3     0.164386      0.495510      0.972905        1.000000   
+tkt_avg_amt_y3     0.101771      0.083764      0.542218        0.510965   
+tkt_book_cnt_y3    0.551056      0.243887      0.038224        0.093358   
+
+                 tkt_avg_amt_y3  tkt_book_cnt_y3  
+tkt_3y_amt             0.101771         0.551056  
+tkt_d_amt_y3           0.083764         0.243887  
+tkt_i_amt_y3           0.542218         0.038224  
+tkt_all_amt_y3         0.510965         0.093358  
+tkt_avg_amt_y3         1.000000        -0.015532  
+tkt_book_cnt_y3       -0.015532         1.000000  
+特征值为：
+[2.64593065e+00 1.54206968e+00 8.82675605e-01 4.99060772e-01 4.30263292e-01 3.45433979e-13]
+贡献率为：
+[4.40988442e-01 2.57011613e-01 1.47112601e-01 8.31767953e-02 7.17105487e-02 5.75723298e-14]
+累计贡献率为：
+[0.44098844 0.69800006 0.84511266 0.92828945 1.         1.        ]
+</code></pre>
+<p>选取前两个主成分(84.5%)，将6个因子降维至3个：tkt_1、tkt_2、tkt_3 。</p>
+<p><strong>出发地</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">字段名</th>
+<th style="text-align: center;">描述</th>
+<th style="text-align: center;">备注</th>
+<th>空值占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">pref_orig_y3</td>
+<td style="text-align: center;">偏好出发地</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>60.8%</td>
+</tr>
+<tr>
+<td style="text-align: center;">pref_city</td>
+<td style="text-align: center;">偏好出发地</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p>​    这两列数据包含的数据内容和信息是一致的，并且可以互相补充，得到信息量更加全面的出发地信息，我们收集了其机场所在的国家的GDP，将机场信息转化为GDP，然后进行降维处理。</p>
+<pre><code>相关系数矩阵为：
+                pref_orig_y3_1  pref_orig_y3_2  pref_orig_y3_3  
+pref_orig_y3_1        1.000000        0.266823        0.236225   
+pref_orig_y3_2        0.266823        1.000000       -0.195751   
+pref_orig_y3_3        0.236225       -0.195751        1.000000   
+pref_orig_y3_4        0.141145        0.006520        0.353987   
+pref_orig_y3_5        0.167669        0.037558        0.277722   
+
+                pref_orig_y3_4  pref_orig_y3_5  
+pref_orig_y3_1        0.141145        0.167669  
+pref_orig_y3_2        0.006520        0.037558  
+pref_orig_y3_3        0.353987        0.277722  
+pref_orig_y3_4        1.000000        0.639099  
+pref_orig_y3_5        0.639099        1.000000  
+特征值为：
+[1.9649973  1.24606037 0.91968225 0.51790843 0.35135165]
+贡献率为：
+[0.39299946 0.24921207 0.18393645 0.10358169 0.07027033]
+累计贡献率为：
+[0.39299946 0.64221153 0.82614798 0.92972967 1.        ]
+</code></pre>
+<p><strong>orig1</strong>:
+$$
+orig1=-0.306\times pref_orig_y3_1 -0.018\times pref_orig_y3_2-0.458\times pref_orig_y3_3\-0.598\times pref_orig_y3_4+-0.582 \times pref_orig_y3_5
+$$
+<strong>orig2</strong>:
+$$
+orig2= -0.548\times pref_orig_y3_1  -0.791\times pref_orig_y3_2+ 0.255 \times pref_orig_y3_3\+0.088\times pref_orig_y3_4 +0.022 \times pref_orig_y3_5
+$$</p>
+<p><strong>orig3</strong>:
+$$
+orig3= -0.568\times pref_orig_y3_1 +0.255 \times pref_orig_y3_2 -0.581 \times pref_orig_y3_3\+ 0.336\times pref_orig_y3_4 + 0.402 \times pref_orig_y3_5
+$$</p>
+<p><strong>飞行距离</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">字段名_y3</th>
+<th style="text-align: center;">描述</th>
+<th style="text-align: center;">备注</th>
+<th>空值占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">avg_dist_cnt</td>
+<td style="text-align: center;">最近Y年每次旅行平均里程</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>66.6%</td>
+</tr>
+<tr>
+<td style="text-align: center;">dist_d_cnt</td>
+<td style="text-align: center;">最近Y年累计里程-国内</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>27.4%</td>
+</tr>
+<tr>
+<td style="text-align: center;">dist_all_cnt</td>
+<td style="text-align: center;">最近Y年总里程</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>60.5%</td>
+</tr>
+<tr>
+<td style="text-align: center;">dist_i_cnt</td>
+<td style="text-align: center;">最近Y年累计里程-国际</td>
+<td style="text-align: center;">m3、m6、y1、y2、y3，指累计三个月、累计六个月、累计一年、累计两年和累计三年</td>
+<td>25.5%</td>
+</tr>
+</tbody>
+</table>
+<p>同样，采用pca进行降维：</p>
+<pre><code>相关系数矩阵为：                 avg_dist_cnt_y3  dist_d_cnt_y3  dist_all_cnt_y3  \
+avg_dist_cnt_y3         1.000000      -0.020321        -0.042752   
+dist_d_cnt_y3          -0.020321       1.000000        -0.010851   
+dist_all_cnt_y3        -0.042752      -0.010851         1.000000   
+dist_i_cnt_y3          -0.018841       0.068417         0.001424   
+
+                 dist_i_cnt_y3  
+avg_dist_cnt_y3      -0.018841  
+dist_d_cnt_y3         0.068417  
+dist_all_cnt_y3       0.001424  
+dist_i_cnt_y3         1.000000  
+特征值为：
+[1.07930431 1.03736404 0.95394453 0.92938712]
+贡献率为：
+[0.26982608 0.25934101 0.23848613 0.23234678]
+累计贡献率为：
+[0.26982608 0.52916709 0.76765322 1.        ]
+</code></pre>
+<p>保留3个主成分(76.7%)：dist_1、dist_2、dist_3。</p>
+<h4 id="53">5.3 缺失值分析</h4>
+<p>从缺失机制可将缺失数据划分为以下三种：</p>
+<ul>
+<li>完全随机缺失（Missing Completely at Random，MCAR）。数据的缺失与不完全变量以及完全变量都是无关的。</li>
+<li>随机缺失（Missing at Random，MAR）。数据的缺失仅仅依赖于完全变量。</li>
+<li>非随机、不可忽略缺失（Not Missing at Random,NMAR，or nonignorable）。不完全变量中数据的缺失依赖于不完全变量本身，这种缺失是不可忽略的。</li>
+</ul>
+<p>该数据集中的缺失值均为统计过程中所遗漏的数据，属于完全随机缺失型。</p>
+<p>1.如果某个特征因子缺失的样本占80%以上，直接舍弃；因为如果作为特征加入的话，可能会带入噪音，影响最后的结果。</p>
+<p>2.结合每个字段的具体含义、数据类型、重要性以及缺失率，选择将以下数据进行填补：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">特征</th>
+<th style="text-align: right;">缺失值个数</th>
+<th style="text-align: right;">缺失比例</th>
+<th>缺失率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">pax_fcny</td>
+<td style="text-align: right;">34</td>
+<td>0.001451</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">pax_tax</td>
+<td style="text-align: right;">90</td>
+<td>0.003841</td>
+</tr>
+</tbody>
+</table>
+<h5 id="531">5.3.1 随机森林填补缺失值</h5>
+<p>​   考虑到数据样本各因子间可能存在某种潜在关系，本方案采用随机森林（random forest，RF）对数据缺失值进行“预测”。</p>
+<p>​   RF是以决策树为基础分类器等集成分类器。该算法在处理缺失数据的过程中具有计算速度快、鲁棒性高、不易产生过拟合、对数据分布不限制、并可以有效分析高维复杂数据等优秀的特性。这些特性很好的适应了本赛题数据集中数据“缺失值占比大”、“模糊异常值较多”、“缺失值分布随机”的特点。</p>
+<p>​   填补缺失值的方法大致如下：</p>
+<ol>
+<li>将需要填补的特征数据按数据缺失率从小到大排序，从缺失最小的特征（假设该特征为R）开始进行填补；</li>
+<li>将特征R不缺失的值的其他特征以及目标因子作为训练集x_train，其他特征的缺失值先用0代替；特征R不缺失的值作为训练集y_train;</li>
+<li>将特征R缺失的值的其他特征以及目标因子作为测试集x_text，其他特征的缺失值先用0代替；特征R缺失的值作为测试集y_text;</li>
+<li>运用随机森林对上边划分好的数据进行回归预测，并将预测值放到原本的矩阵中；</li>
+<li>再从剩下未处理数据中选取缺失率最小的特征，迭代上述过程直到所有特征数据填补完成。</li>
+</ol>
+<h4 id="54-smote">5.4 SMOTE数据过采样</h4>
+<p><strong>SMOTE算法</strong></p>
+<p>本题数据付费旅客和不付费旅客的数据比例大致是1：10，存在严重的数据比例不平衡的情况，为了防止数据过拟合，本项目将采用SMOTE算法，生成相应的数据进行训练。SMOTE算法的基本思想就是对少数类别样本进行分析和模拟，并将人工模拟的新样本添加到数据集中，进而使原始数据中的类别不再严重失衡。该算法的模拟过程采用了KNN技术。</p>
+<p>模拟生成新样本的步骤如下：</p>
+<ol>
+<li>采样最邻近算法，计算出每个少数类样本的K个近邻;</li>
+<li>从K个近邻中随机挑选N个样本进行随机线性插值;</li>
+<li>构造新的少数类样本;</li>
+<li>将新样本与原数据合成，产生新的训练集;</li>
+</ol>
+<h4 id="55">5.5 最终筛选出的因子</h4>
+<p>经过上述操作后，最终得到如下28个因子：</p>
+<ul>
+<li>旅客个人基本信息(6个)：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>emd_lable2</td>
+<td style="text-align: left;">目标列。</td>
+<td>0：未付费选座；1：已付费选座</td>
+</tr>
+<tr>
+<td>pax_name</td>
+<td style="text-align: left;">旅客统一编码</td>
+<td>用于标识用户</td>
+</tr>
+<tr>
+<td>pax_passport</td>
+<td style="text-align: left;">旅客统一编码</td>
+<td>用于标识用户</td>
+</tr>
+<tr>
+<td>gender</td>
+<td style="text-align: left;">性别</td>
+<td></td>
+</tr>
+<tr>
+<td>age</td>
+<td style="text-align: left;">年龄层</td>
+<td></td>
+</tr>
+<tr>
+<td>mdl_mcv</td>
+<td style="text-align: left;">旅客价值</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>旅客当前所选择航班特征(5个)：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>seg_route_to</td>
+<td style="text-align: left;">到达</td>
+<td></td>
+</tr>
+<tr>
+<td>seg_flight</td>
+<td style="text-align: left;">航班号</td>
+<td></td>
+</tr>
+<tr>
+<td>seg_cabin</td>
+<td style="text-align: left;">舱位</td>
+<td></td>
+</tr>
+<tr>
+<td>pax_fcny</td>
+<td style="text-align: left;">机票费</td>
+<td></td>
+</tr>
+<tr>
+<td>pax_tax</td>
+<td style="text-align: left;">机票税费</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>旅客偏好出发到达地以及航线特征(6个)：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orig1</td>
+<td style="text-align: left;">将pref_orig、pref_city描述机场所在的国家的GDP经过PCA降维后得到的第一个主成分。</td>
+<td></td>
+</tr>
+<tr>
+<td>orig2</td>
+<td style="text-align: left;">将pref_orig、pref_city描述机场所在的国家的GDP经过PCA降维后得到的第二个主成分。</td>
+<td></td>
+</tr>
+<tr>
+<td>orig3</td>
+<td style="text-align: left;">将pref_orig、pref_city描述机场所在的国家的GDP经过PCA降维后得到的第三个主成分。</td>
+<td></td>
+</tr>
+<tr>
+<td>pref_orig_y3_1</td>
+<td style="text-align: left;">偏好出发地</td>
+<td></td>
+</tr>
+<tr>
+<td>pref_city_y3_1</td>
+<td style="text-align: left;">年常飞城市</td>
+<td></td>
+</tr>
+<tr>
+<td>pref_line_y3_1</td>
+<td style="text-align: left;">常飞航线</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>旅客时间特征(3个)：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>seg_dep_time_y</td>
+<td style="text-align: left;">当前航班日期年份</td>
+<td></td>
+</tr>
+<tr>
+<td>seg_dep_time_m</td>
+<td style="text-align: left;">当前航班日期月份</td>
+<td></td>
+</tr>
+<tr>
+<td>prebuy_i_cnt_y3_d99</td>
+<td style="text-align: left;">提前99天购买次数</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>旅客偏好机型与座位特征(3个)：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cabin_hy_cnt_y3</td>
+<td style="text-align: left;">最近Y年超级经济舱次数</td>
+<td></td>
+</tr>
+<tr>
+<td>cabin_hf_cnt</td>
+<td style="text-align: left;">最近Y年豪华头等舱次数</td>
+<td></td>
+</tr>
+<tr>
+<td>pref_aircraft</td>
+<td style="text-align: left;">偏好机型</td>
+<td>按照机型载客量将顾客偏好机型分为3类。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>旅客行驶里程特征(2个)：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dist_1</td>
+<td style="text-align: left;">由avg_dist_cnt、dist_d_cnt、dist_all_cnt、dist_i_cnt经过PCA降维得到第一个主成分</td>
+<td></td>
+</tr>
+<tr>
+<td>dist_2</td>
+<td style="text-align: left;">由avg_dist_cnt、dist_d_cnt、dist_all_cnt、dist_i_cnt经过PCA降维得到第二个主成分</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>机票消费特征(3个)：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>因子</th>
+<th style="text-align: left;">描述</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tkt_1</td>
+<td style="text-align: left;">由tkt_3y_amt、tkt_d_amt、tkt_i_amt、tkt_all_amt、tkt_avg_amt、tkt_book_cnt经PCA降维得到第一个主成分。</td>
+<td></td>
+</tr>
+<tr>
+<td>tkt_2</td>
+<td style="text-align: left;">由tkt_3y_amt、tkt_d_amt、tkt_i_amt、tkt_all_amt、tkt_avg_amt、tkt_book_cnt经PCA降维得到第二个主成分。</td>
+<td></td>
+</tr>
+<tr>
+<td>tkt_3</td>
+<td style="text-align: left;">由tkt_3y_amt、tkt_d_amt、tkt_i_amt、tkt_all_amt、tkt_avg_amt、tkt_book_cnt经PCA降维得到第三个主成分。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="6">6.分类模型算法介绍</h3>
+<h4 id="61-randomforest">6.1 RandomForest</h4>
+<p>​          随机森林由许多的决策树组成，因为这些决策树的形成采用了随机的方法，因此也叫随机决策树。当测试数据进入随机森林时，就是让生成的每一颗决策树进行分类，最后选取决策树中分类结果最多的那一类作为最终的结果。随机森林在树上引入了更多的随机性：分裂节点时不再是搜索最好的特征，而是在随机生成的特征子集中搜索最好而特征。这导致决策树具有更大的多样性，用更高的偏差换取更低的方差。</p>
+<p>随机森林生成的步骤如下：</p>
+<ol>
+<li>假如输入数据中有 A个样本，则有放回的随机选择A个样本(每次随机选择一个样本， 然后返回继续选择)。这样的样本存在重复的可能性，用这A个样本用来训练一个决策树，作为决策树根节点处的样本。 </li>
+<li>当每个样本有 M 个属性时，在决策树的每个节点需要分裂时，随机从这 M 个属性中选取出 m 个属性，满足条件 m &lt;&lt; M。然后从这 m 个属性中使用某种算法（比如基尼指数）来选择 1 个属性作为该节点的分裂属性。 </li>
+<li>决策树形成过程中每个节点都要按照步骤 2 来分裂。一直到不能够再分裂为止。注意整个 决策树形成过程中没有进行剪枝。 </li>
+<li>按照步骤 1~3 建立大量的决策树，这样就构成了随机森林了。</li>
+</ol>
+<p>随机森林的随机性体现在每颗数的训练样本是随机的，树中每个节点的分类属性也是随机选择的。有了这 2 个随机的保证，随机森林就不会产生过拟合的现象了。</p>
+<h5 id="611">6.1.1 决策树介绍</h5>
+<p><strong>算法分类</strong></p>
+<p>现有的关于决策树学习的主要思想主要包含以下 3 个研究成果：</p>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>支持模型</th>
+<th>树结构</th>
+<th>特征选择</th>
+<th>连续值处理</th>
+<th>缺失值处理</th>
+<th>剪枝</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID3</td>
+<td>分类</td>
+<td>多叉树</td>
+<td>信息增益</td>
+<td>不支持</td>
+<td>不支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>C4.5</td>
+<td>分类</td>
+<td>多叉树</td>
+<td>信息增益比</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>CART</td>
+<td>分类、回归</td>
+<td>二叉树</td>
+<td>基尼系数、均方差</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+</tbody>
+</table>
+<p><strong>算法流程- 划分选择</strong></p>
+<p>决策树学习通常包括 3 个步骤：特征选择、决策树的生成、决策树的修剪。最为关键的就是如何选择最优划分属性。一般而言，随着划分过程不断进行，我们希望决策树的分支结点所包含的样本尽可能属于同一类别，即结点的 “纯度” (purity) 越来越高。</p>
+<p>1<strong>信息增益</strong></p>
+<ul>
+<li>
+<p>信息增益表示得知特征Xj的信息而使所属分类的不确定性减少的程度。特征A对训练数据集D的信息增益g(D,A)，定义为集合D的<strong>经验熵H(D)</strong>与<strong>特征A给定的情况下D的经验条件熵H(D|A)</strong>之差。
+  $$
+  g(D,A)=H(D)-H(D|A)
+  $$</p>
+</li>
+<li>
+<p>假设数据集D有K 种分类，特征A有n种取值可能。其中数据集D的经验熵H(D)为</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+  H(D)=-\sum^K_{k=1}P_klog_2^{Pk}
+\]</div>
+<p>​              其中Pk为集合D中的任一样本数据分类k的概率，或者说属于分类k的样本所占的比例。</p>
+<ul>
+<li>经验条件熵H(D|A)为 </li>
+</ul>
+<div class="arithmatex">\[
+H(D|A)=\sum^n_{i=1}P_iH(D_i)
+\]</div>
+<p>​                      也可记作
+$$
+  Gain(D,a)=Ent(D)-\sum^V_{v=1}\frac{|D^v|}{|D|}Ent(D^v)
+$$</p>
+<p>​                       其中Pi为特征取值为第i个可取值的概率。Di为特征A为第i个可取值的样本集合。</p>
+<ul>
+<li>一般而言，信息增益越大，则意味着使用属性A来进行划分所获得的 "纯度提升" 越大。因此，我们可以用信息增益来进行决策树的划分属性选择。</li>
+</ul>
+<p><strong>信息增益比</strong></p>
+<p>C4.5算法是使用该方式来划分属性。</p>
+<p>特征A对训练数据集D的信息增益gR(D,A)，定义为其信息增益g(D,A)与训练集D的经验熵H(D)之比。
+$$
+g_R(D,A)=\frac{g(D,A)}{H(D)}
+$$</p>
+<p>是为了矫正在训练数据集的经验熵大时，信息增益值会偏大，反之，信息增益值会偏小的问题。即特征选择使用了一个启发式策略：先从候选划分属性中找出信息增益高于平均水平的属性，再从中选择增益率最高的。</p>
+<p><strong>基尼指数</strong></p>
+<p>CART算法中对于分类树采用的是上述的基尼指数最小化准则。</p>
+<ul>
+<li><strong>名词解释</strong>：基尼系数最大为“1”，最小等于“0”。基尼系数越接近0表明收入分配越是趋向平等。</li>
+<li>
+<p><strong>均方差</strong>：标准差是方差的算术平方根。标准差能反映一个数据集的离散程度。</p>
+</li>
+<li>
+<p>无论ID3还是C4.5都是基于信息论的熵模型的，这里面会涉及大量的对数运算，为了简化模型同时也完全丢失熵模型的优点，在CART算法中使用基尼系数来代替信息增益比，基尼系数代表了模型的不纯度，基尼系数越小，则不纯度越低，特征越好。这和信息增益(比)是相反的。通过子集计算基尼不纯度，即随机放置的数据项出现于错误分类中的概率。以此来评判属性对分类的重要程度。</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+Gini(D)=\sum^K_{k=1}p_k(1-p_k)=1-\sum p_k^2 \\
+\]</div>
+<p>​      其中<span class="arithmatex">\(p_k\)</span>为任一样本点属于第k类的概率，也可以说成样本数据集中属于k类的样本的比例。</p>
+<ul>
+<li>集合D的基尼指数为Gini(D)，在特征A条件下的集合D的基尼指数为</li>
+</ul>
+<div class="arithmatex">\[
+Gini(D)=\sum\frac{|D_i|}{|D|}Gini(D_i)\\
+\]</div>
+<p>​       其中$ |D_i|<span class="arithmatex">\(为特征A取第i个值时对应的样本个数。\)</span>|D|$为总样本个数。</p>
+<h4 id="62-xgboost">6.2 XGBoost</h4>
+<p>XGBoost是一个优化的分布式梯度增强库，其设计目的是高效、灵活和可移植。在梯度增强框架下实现机器学习算法。XGBoost提供了一种并行树增强(也称为GBDT, GBM)，以快速和准确的方式解决了许多数据科学问题。XGBoost在提升算法的基础上进行优化的算法，引入二阶导数信息，并加入正则项控制模型的复杂度，具体如下：
+$$
+L(x) = \sum_il(y_i,y_i^{`})+\lambda T+\frac{1}{2}\omega\sum_{j = 1}^T||W_j||^2
+$$
+其中l用来衡量准确值与预测值之间的相似程度，且为可导二元函数。</p>
+<h4 id="63-catboost">6.3 Catboost</h4>
+<p>CatBoost 是一种基于对称决策树为基学习器实现的参数较少、支持类别型变 量和高准确性的 GBDT 框架，主要解决的痛点是高效合理地处理类别型特征， CatBoost 是由 Categorical 和 Boosting 组成。此外，CatBoost 还解决了梯度偏差 （Gradient Bias）及预测偏移（Prediction shift）的问题，从而减少过拟合的发生， 进而提高算法的准确性和泛化能力。</p>
+<h3 id="7">7.模型调参过程</h3>
+<h4 id="71">7.1 参数调优概念和方法</h4>
+<p>​   模型优化是机器学习算法实现中最困难的挑战之一。机器学习模型中有许多的参数，选择合适的参数能够提高模型的泛化能力和模型的精度，如果参数选择不恰当的话会出现欠拟合和过拟合的问题，所以调参的过程不可缺少。通常我们调参会选择在一个大范围内对不同的参数进行测试，找到合适的值后再进行小范围测试。</p>
+<p>​   本文选择贝叶斯优化，贝叶斯优化调参会根据每次的结果选取精度可能会上升的参数，使用贝叶斯优化可以保证在指定的参数范围内找到精度最高的参数。并且减少工作量。</p>
+<h4 id="72">7.2 模型调参过程</h4>
+<p>​   建模时线固定每个参数的初始值，再设定其调参范围，进行贝叶斯优化寻找最优化结果。其中设置的初始值、范围和调参结果见各算法框架参数结果详情表，本文模型从精确率、回归率F1值、ROC曲线、AUC值指标进行观察模型。</p>
+<h4 id="73-randomforestclassifier">7.3 RandomForestClassifier参数调优过程与结果</h4>
+<p>​   建模时线固定每个参数的初始值，再设定其调参范围，进行网格搜索和交叉验证寻找最优化的结果。其中设置的初始值、范围和调参结果见各算法框架参数结果详情表。</p>
+<table>
+<thead>
+<tr>
+<th><strong>参数名称</strong></th>
+<th>初始值</th>
+<th>调参范围</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n_estimators</td>
+<td>1</td>
+<td>1-200</td>
+<td>137</td>
+</tr>
+<tr>
+<td>max_depth</td>
+<td>10</td>
+<td>10-50</td>
+<td>36</td>
+</tr>
+</tbody>
+</table>
+<p>​   随机森林的参数的参数有两个，分别为n_estimators：随机森林中数模型的数量、max_depth:树的最大深度。调整参数后</p>
+<p>调参后的准确率报告和ROC曲线：</p>
+<p><img src="https://i.loli.net/2021/04/22/lNJ5RgcwFYDb1IB.png"  /></p>
+<h4 id="74-xgboost">7.4 XGBoost参数调优过程与结果</h4>
+<p>​   XGBoost算法调整的第一个参数是n_estimators，这个参数越大，模型的学习能力就会越强，但是程序也会运行得越来越慢，根据边界效应选择合适的参数。参数max_depth：树的最大深度，用于控制过拟合典型值为3-10，参数min_child_weight定义定义了一个子集的所有观察值的最小权重和。参数colsample_bytree：构造每棵树时，列采样率。参数Learning_rate表示集中学习的学习率，又称为步长以控制迭代速率，为防止过拟合，默认是0.1，取值范围为[0.01,0.2]。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>参数名称</strong></th>
+<th>初始值</th>
+<th>调参范围</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">n_estimators</td>
+<td>500</td>
+<td>400-800</td>
+<td>439</td>
+</tr>
+<tr>
+<td style="text-align: left;">max_depth</td>
+<td>5</td>
+<td>1-20</td>
+<td>17</td>
+</tr>
+<tr>
+<td style="text-align: left;">min_child_weight</td>
+<td>1</td>
+<td>1-5</td>
+<td>2.34</td>
+</tr>
+<tr>
+<td style="text-align: left;">colsample_bytree</td>
+<td>0.8</td>
+<td>0.6-0.9</td>
+<td>0.74</td>
+</tr>
+<tr>
+<td style="text-align: left;">subsample</td>
+<td>0.6</td>
+<td>0.6-0.9</td>
+<td>0.84</td>
+</tr>
+<tr>
+<td style="text-align: left;">learning_rate</td>
+<td>0.1</td>
+<td>0.0001-0.9999</td>
+<td>0.07</td>
+</tr>
+<tr>
+<td style="text-align: left;">gamma</td>
+<td>0.1</td>
+<td>0.1-0.7</td>
+<td>0.22</td>
+</tr>
+<tr>
+<td style="text-align: left;">Reg_lambda</td>
+<td>0.001</td>
+<td>0.001-3</td>
+<td>2.01</td>
+</tr>
+<tr>
+<td style="text-align: left;">Reg_alpha</td>
+<td>0.001</td>
+<td>0.001-2</td>
+<td>0.41</td>
+</tr>
+</tbody>
+</table>
+<p>调参后的准确率报告和ROC曲线：</p>
+<p><img alt="" src="https://i.loli.net/2021/04/22/aHhUYEJgTXQD9rW.png" /></p>
+<h4 id="75-catboost">7.5 Catboost参数调优过程及结果</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>参数名称</strong></th>
+<th>初始值</th>
+<th>调参范围</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">depth</td>
+<td>5</td>
+<td>4-9</td>
+<td>8</td>
+</tr>
+<tr>
+<td style="text-align: left;">bagging_temperature</td>
+<td>1</td>
+<td>0.01-0.999</td>
+<td>0.19</td>
+</tr>
+<tr>
+<td style="text-align: left;">learning_rate</td>
+<td>0.1</td>
+<td>0.01-0.999</td>
+<td>0.13</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://i.loli.net/2021/04/22/qxO3rl6tBRm4bCV.png" /></p>
+<h3 id="8">8.模型融合</h3>
+<p>模型融合采用软投票的方式将三个模型进行融合。</p>
+<p>最后的准确率报告结果为：</p>
+<p><img alt="" src="https://i.loli.net/2021/04/22/4Yl2JQxaFE1vdjW.png" /></p>
+<h3 id="9">9.预测结果评估</h3>
+<p>​   从最后的结果来看，三个模型的表现都比较可观，并且最后软投票的结果比XGBoost和随机森林两个模型的结果更加好，Catboost本身的指标就比较好。另外，从报告分析来看，三个模型对付费用户的召回率指标比较差，这可能是因子特征本身信息量比较少且分布不均匀导致的。</p>
+<h3 id="10">10.结语</h3>
+<p>​   本方案通过对顾客行为特征 、顾客需求以及偏好的关联分析 ,从顾客价值角度出发，实际验证了消费者的个人特征因素及其对顾客价值形成的影响，最后结合验证结果对顾客未来消费行为进行了预测，对于公务航空运营商和使用航空高端产品及服务的用户具有一定参考价值。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
