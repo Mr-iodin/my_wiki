@@ -1,0 +1,3393 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+      
+      
+        <link rel="next" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>计算机组成原理——第二章 数据的表示和运算 - 简历</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="简历" class="md-header__button md-logo" aria-label="简历" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            简历
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              计算机组成原理——第二章 数据的表示和运算
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="简历" class="md-nav__button md-logo" aria-label="简历" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    简历
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            算法
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    STL库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            STL库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/sort%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sort自定义排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94iterator/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—iterator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94vector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—vector
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94map/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库—map
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../STL%E5%BA%93/STL%E5%BA%93%E2%80%94set/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    STL库——set容器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            数论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/%E9%9C%8D%E7%BA%B3%E6%B3%95%E5%88%99/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多项式求值——霍纳法则(Horner's rule)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/%E9%AB%98%E6%96%AF%E6%B6%88%E5%85%83%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高斯消元法—求解线性方程组
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高级数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            高级数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    可持久化数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    刷题记录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            刷题记录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AE%97%E6%B3%95/PAT%E5%88%B7%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PAT刷题记录（1-16）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学建模
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学建模
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    评价模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            评价模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%B1%82%E6%AC%A1%E5%88%86%E6%9E%90%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    层次分析法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/TOPSIS%E6%B3%95%EF%BC%88%E4%BC%98%E5%8A%A3%E8%A7%A3%E8%B7%9D%E7%A6%BB%E6%B3%95%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TOPSIS法（优劣解距离法）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    回归模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            回归模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    回归分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E5%9B%9E%E5%BD%92%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    回归评价指标
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    聚类模型
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            聚类模型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    几种聚类模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    排队论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            排队论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/%E6%8E%92%E9%98%9F%E8%AE%BA%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    排队论模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据挖掘
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            数据挖掘
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网络爬虫
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            网络爬虫
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络爬虫基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    机器学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            机器学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    神经网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            神经网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    神经网络——基本理论文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/MLPRegressor%20%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MLPRegressor 神经网络搭建
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    随机森林
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            随机森林
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E6%8F%92%E5%80%BC%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机森林插值分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90%EF%BC%88R%EF%BC%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机森林预测分析（R）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    专业课
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            专业课
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第一章 概论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E7%BA%BF%E6%80%A7%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第二章 线性表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第三章 栈和队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E4%B8%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第四章 串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E6%95%B0%E7%BB%84%E3%80%81%E7%9F%A9%E9%98%B5%E4%B8%8E%E5%B9%BF%E4%B9%89%E8%A1%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第五章 数组、矩阵与广义表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第六章 树与二叉树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%9B%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第七章 图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E5%85%AB%E7%AB%A0%20%E6%8E%92%E5%BA%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第八章 排序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%AC%AC%E4%B9%9D%E7%AB%A0%20%E6%9F%A5%E6%89%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构——第九章 查找
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机组成原理
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            计算机组成原理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第一章 计算机系统概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第二章 数据的表示和运算
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第二章 数据的表示和运算
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 数制与编码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 数制与编码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 进位计数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 不同进制数之间转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 真值和机器数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-bcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 BCD码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 字符和字符串
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.校验码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.校验码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 奇偶校验码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 海明校验码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-crc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 循环冗余校验（CRC）码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 定点数的表示和运算
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 定点数的表示和运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 无符号与有符号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 机器数的顶点表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 原码、补码、反码、移码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 定点数的运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 原码定点数的加减法运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 补码定点数加减法运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 符号位扩展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 溢出的概念和判别方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9 定点数的乘法运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10 定点数的除法运算
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. C语言中整数类型及类型转换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. C语言中整数类型及类型转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 有符号数和无符号数数的转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 不同字长整数之间的转换
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.数据的存储和排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.数据的存储和排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 数据的大端方式和小端方式的存储
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 数据按“边界对齐”方式存储
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 算数逻辑单元（ALU）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 算数逻辑单元（ALU）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 串行加法器和并行加法器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 算数逻辑单元的功能和构造
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第三章 存储系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E6%8C%87%E4%BB%A4%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机组成原理——第四章 指令系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    项目技术栈
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            项目技术栈
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    航空旅客付费选座意愿识别
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            航空旅客付费选座意愿识别
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E8%88%AA%E7%A9%BA%E6%97%85%E5%AE%A2%E4%BB%98%E8%B4%B9%E9%80%89%E5%BA%A7%E6%84%8F%E6%84%BF%E8%AF%86%E5%88%AB/%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一、项目分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E8%88%AA%E7%A9%BA%E6%97%85%E5%AE%A2%E4%BB%98%E8%B4%B9%E9%80%89%E5%BA%A7%E6%84%8F%E6%84%BF%E8%AF%86%E5%88%AB/%E8%AF%A6%E7%BB%86%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二、详细方案
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    股市板块多序列预测
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            股市板块多序列预测
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/LSTM%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E2%80%94%E2%80%94%E8%82%A1%E5%B8%82%E6%9D%BF%E5%9D%97%E5%A4%9A%E5%BA%8F%E5%88%97%E9%A2%84%E6%B5%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    详细方案 (LSTM神经网络)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    岩石荧光区域分割
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            岩石荧光区域分割
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E5%B2%A9%E7%9F%B3%E8%8D%A7%E5%85%89%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2/%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一、项目分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E5%B2%A9%E7%9F%B3%E8%8D%A7%E5%85%89%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2/%E8%AF%A6%E7%BB%86%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    二、详细方案
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    涉疫地面自动提取
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            涉疫地面自动提取
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%A1%B9%E7%9B%AE%E6%B1%87%E6%80%BB/%E5%9F%BA%E4%BA%8EBi-LSTM-CRF%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB%E6%B6%89%E7%96%AB%E5%9C%B0%E5%90%8D%E8%87%AA%E5%8A%A8%E6%8F%90%E5%8F%96/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    详细方案（Bi-LSTM-CRF）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 数制与编码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 数制与编码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 进位计数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 不同进制数之间转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 真值和机器数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-bcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 BCD码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 字符和字符串
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.校验码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.校验码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 奇偶校验码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 海明校验码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-crc" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 循环冗余校验（CRC）码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 定点数的表示和运算
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 定点数的表示和运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 无符号与有符号
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 机器数的顶点表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 原码、补码、反码、移码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 定点数的运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 原码定点数的加减法运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.6 补码定点数加减法运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.7 符号位扩展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.8 溢出的概念和判别方法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#39" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.9 定点数的乘法运算
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#310" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.10 定点数的除法运算
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. C语言中整数类型及类型转换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. C语言中整数类型及类型转换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 有符号数和无符号数数的转换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 不同字长整数之间的转换
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.数据的存储和排序
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.数据的存储和排序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 数据的大端方式和小端方式的存储
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 数据按“边界对齐”方式存储
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-alu" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 算数逻辑单元（ALU）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 算数逻辑单元（ALU）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 串行加法器和并行加法器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 算数逻辑单元的功能和构造
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">计算机组成原理——第二章 数据的表示和运算</h1>
+<h3 id="1">1. 数制与编码</h3>
+<h5 id="11">1.1 进位计数</h5>
+<p>​   在进位计数法中，计算机通常使用二进制数、八进制数和十六进制数。</p>
+<p>​    每个数位所用的不同数码个数称为<strong>基数</strong>（如：十进制数的基数为10（0～9）），每个数码所标示的数值等于该数码本身乘以一个与它所在数位有关的常数，这个常数称为<strong>位权</strong>。</p>
+<p>​    一个r进制数（K<sub>n</sub>K<sub>n-1</sub>...K<sub>0</sub>K<sub>-1</sub>...K<sub>-m</sub>）的数值可表示为
+$$
+K_{n}r^{n}+K_{n-1}r^{n-1}...+K_{0}r^{0}+K_{-1}r^{-1}+...+K_{-m}r^{-m}=\sum^{-m}<em>{i=n} K</em>{i}r^{i}
+$$
+式中，r是基数，r<sup>i</sup>是第i位位权，K<sub>i</sub>取值可以是0，1，2，...，r-1共r个数码中任意一个。</p>
+<h5 id="12">1.2 不同进制数之间转换</h5>
+<ul>
+<li>二进制→八进制（3位） 和 二进制→十六进制（4位）</li>
+</ul>
+<p>转换时应以小数点为界。根据需要在最左和最右加0补齐“0”；</p>
+<p><img alt="" src="https://i.loli.net/2021/06/28/yFXDtlQ1dCgqb4p.png" /></p>
+<ul>
+<li>二进制→十进制</li>
+</ul>
+<p>​        将任意值数的各位数码与它们的权值相乘，再将乘积相加。例如
+$$
+（11011.1）_2=1 \times2^4+1 \times2^3+0 \times2^2+1 \times2^1+1 \times2^0+1 \times2^{-1}=27.5
+$$</p>
+<ul>
+<li>将十进制转换为任意进制数</li>
+</ul>
+<p>​    对整数部分<strong>除基取余</strong>，最先取得的余数为数的最低位，最后取得的余数为数的最高位，商为0时结束。</p>
+<p><img alt="" src="https://i.loli.net/2021/06/28/wikYrTpoAyxZKR2.png" /></p>
+<p>​    对小数部分<strong>乘基取整</strong>，最先得到的整数为最高位，最后得到的整数为数的最低位，乘积为1.0时结束。</p>
+<p><img alt="" src="https://i.loli.net/2021/06/28/Kr2tXuxyCMBaj47.png" /></p>
+<blockquote>
+<p>注：</p>
+<p>​ 在计算机中，小数和整数不同，整数可以连续表示，但小数是离散的，所以并不是每个十进制的小数都可以用二进制来表示。如0.3，无论乘以二取整转换都无法得到精确结果。</p>
+</blockquote>
+<h5 id="13">1.3 真值和机器数</h5>
+<ul>
+<li>真值：机器数所实际表示的值，用“+”“-”号来表示正数还是负数；</li>
+<li>机器数：采用数和符号的数值一起编码的方法来表示数据。常用原码、补码和反码表示。通常用“0”表示正，“1”表示负。</li>
+</ul>
+<h5 id="14-bcd">1.4 BCD码</h5>
+<p>​    二进制数编码的十进制数，通常采用4位二进制来表示一位十进制的0～9这10个数码。</p>
+<p>​   以下列举几种常用的BCD码：</p>
+<ul>
+<li><strong>8421码</strong>：一种有权码，权值从高到低依次为8、4、2、1，表示的十进制数为 D=8b<sub>3</sub>+4b<sub>2</sub>+2b<sub>1</sub>+1b<sub>0</sub> 。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>十进制数</th>
+<th>8421码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+</tr>
+</tbody>
+</table>
+<p>​    <strong>修正</strong>：</p>
+<ul>
+<li>
+<p>若两个8421码相加之和小于(1001)<sub>2</sub> ，即 (9)<sub>10</sub>,则不需要修正；</p>
+</li>
+<li>
+<p>若相加之和大于等于(1010)<sub>2</sub> ，即 (10)<sub>10</sub>，则<font color=red size=4 >要加6进行修正</font>，并向高位进位，进位可以在相加或者修正时产生</p>
+<p><img alt="" src="https://i.loli.net/2021/06/28/mcqlLThZDG32U5B.png" /></p>
+</li>
+<li>
+<p><strong>余3码</strong>：一种无权码，是在8421码的基础上加(0011)<sub>2</sub>形成的</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>十进制数</th>
+<th>8421码</th>
+<th>余3码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>0011</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>0100</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>0101</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>0110</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+<td>0111</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+<td>1010</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1000</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1001</td>
+<td>1100</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>2421码</strong>：一种有权码，权值从高到低分别为2、4、2、1，特点是大于等于5的最高位为1，小于等于5的最高位为0。</li>
+</ul>
+<p><img alt="" src="https://i.loli.net/2021/06/28/GV46pHFiBItwDcK.png" /></p>
+<h5 id="15">1.5 字符和字符串</h5>
+<p><strong>ASCLL码：</strong></p>
+<p>​   国际上普遍采用一种字符系统是7位二进制编码的ASCLL码，它可以表示10个十进制数码、52个英文大写字母和小写字母以及一定数量的专用符号，共128个字符。</p>
+<p><strong>汉字编码：</strong></p>
+<p><img src="https://i.loli.net/2021/06/28/G7fb4jy8CiKzNgW.png" style="zoom:50%;" /></p>
+<ul>
+<li>区位码</li>
+</ul>
+<p>​    由汉字所在的<strong>区号</strong>和<strong>位置号</strong>合起来得到的四位数字编码，如“啊”的区位码是<u>16</u> (区码) <u>01</u>(位码) ；</p>
+<ul>
+<li>国标码</li>
+</ul>
+<p>​    计算机之间或与终端之间进行信息交换时，要求它们之间传送的汉字代码信息完全一致，国家规定了信息交换用的标准汉字交换码，即<strong>国际码</strong>；</p>
+<p>​    国际码的每个编码由两个字节组成，分高、低字节。</p>
+<ul>
+<li>内码</li>
+</ul>
+<p>​    在计算机内部存储、运算的信息代码称为汉字的内码（由高、低两个字节组成）；</p>
+<p><strong>汉字编码之间的转换：</strong></p>
+<ul>
+<li>区码→国标码（已知区位码求国标码）
+  $$
+  国标码高字节=区码+20H\国标码低字节=位码+20H
+  $$
+  例：“啊”字的区位码为1601</li>
+</ul>
+<p>​ ① 十进制转化为16进制 
+  $$
+  高位：16→10H\\
+  低位：01→01H
+  $$
+  ​ ②利用转换公式转化为国标码，转换公式如下：
+  $$
+  国标码高字节=区码+20H\
+  国标码低字节=位码+20H
+  $$
+  ​     将“啊”的区位码进行转换：
+  $$
+  “啊”国标码高字节=区码（10H）+20H=30H\
+  “啊”国标码低字节=位码（01H）+20H=21H
+  $$
+  所以“啊”字的国标码为 3021H</p>
+<ul>
+<li>国标码→内码（已知国标码求内码）</li>
+</ul>
+<p>​    转换公式如下：
+  $$
+  内码高字节=国标码高字节+80H\
+  内码低字节=国标码低字节+80H
+  $$
+  例：“啊”字的国标码为3021H</p>
+<p>​       将“啊”的国标码转换为内码：
+  $$
+  “啊”内码高字节=国标码高字节（30H）+80H=B0H\
+  “啊”内码低字节=国标码低字节（21H）+80H=A1H
+  $$
+  所以A的内码为B0A1H</p>
+<ul>
+<li>区位码→内码(已知区码求内码)
+  $$
+  内码高字节=区码+A0H\
+  内码低字节=位码+A0H
+  $$
+     将“啊”区位码直接转换为内码：</li>
+</ul>
+<div class="arithmatex">\[
+“啊”内码高字节=区码（30H）+A0H=B0H\\
+“啊”内码低字节=位码（21H）+A0H=A1H
+\]</div>
+<h3 id="2">2.校验码</h3>
+<p>​   校验码是指能够发现的 或 能自动纠正错误 的数据编码，也称为纠错码。其原理是<strong>通过增加一些冗余码，来检验或纠错</strong>。</p>
+<p>​    通常某种编码都是由许多码字构成，任意两个合法码字之间<strong>最少变化的二进制位数</strong>，称为数据校验码的<strong>码距</strong>。</p>
+<p>（比如8421码，1001和0000，有两位不同，所以距离是2，而0010和0011的距离为1，是最小的距离，故8421码码距为1。）</p>
+<p>码距越大，检错、纠错能力越强，检错能力总是大于等于纠错能力。</p>
+<h5 id="21">2.1 奇偶校验码</h5>
+<p>​    在原编码上加一个检验位，它的码距等于2，</p>
+<blockquote>
+<p>​    以原始码流0000和0001为例，奇校验为00001和00010，有两位上的数不同，因此码距为2。偶校验为00000和00011，同样有后两位上的数不同，码距为2。</p>
+</blockquote>
+<p>可以检验出一位错误（奇数位错误），但不能确定出错位置，也不能够检测出偶数错误，增加的冗余位称为奇偶校验位。</p>
+<p><img src="https://i.loli.net/2021/06/29/EIMd5TSwRN3oljP.png" style="zoom: 200%;" /></p>
+<p><strong>实现方法：</strong></p>
+<p>​   由若干有效信息（如1B）再加上一个二进制位（校验位）组成校验码，校验位的取值（0或1）将使得整个校验码中的“1”的个数为奇数或偶数。</p>
+<p><img alt="" src="/Users/suneann/Library/Application Support/typora-user-images/截屏2021-06-29 下午4.39.15.png" /></p>
+<p><img alt="" src="/Users/suneann/Library/Application Support/typora-user-images/截屏2021-06-29 下午4.39.26.png" /></p>
+<p><strong>缺点：</strong></p>
+<p>​        具有局限性，奇偶校验只能发现数据代码中奇数位的出错情况，但不能纠错错误，常用于对存储器的检查或传输数据的检查。</p>
+<h5 id="22">2.2 海明校验码</h5>
+<p>​    一种广泛采用的校验码，它实际上是一种多重奇偶校验码。原理是在有效信息位中加入几个校验位形成海明码，并把海明码每个二进制分配到几个奇偶校验组中。</p>
+<p>根据纠错理论：
+$$
+L-1=D+C 且 D\leq C
+$$
+编码最小码句L越大，其检测到位数D越大，纠正错误的位数C越大，且纠错能力恒小于等于检错能力。</p>
+<p>【例】（海明码的求解步骤）在n=4、k=3时，求1010的海明码。</p>
+<p>​   <em>第一步：确定海明码位数</em></p>
+<p>​       设n为有效位数，k为校验位数，则信息位n和校验位k应满足
+$$
+n+k\leq2^k-1
+$$
+(注：若不满足条件，则需适当增加校位，如若要校验两位错，则需再增加1位校验位，即k+1位)</p>
+<p>海明码位数位<span class="arithmatex">\(n+k=7\leq2^3-1\)</span>成立，则n、k有效。设信息位为D<sub>4</sub>D<sub>3</sub>D<sub>2</sub>D<sub>1</sub>(1010)共4位，校验位为P<sub>3</sub>P<sub>2</sub>P<sub>1</sub>，共3位，对应的海明码为H<sub>7</sub>H<sub>6</sub>H<sub>5</sub>H<sub>4</sub>H<sub>3</sub>H<sub>2</sub>H<sub>1</sub>。</p>
+<p>​   <em>第二步：确定校验位的分布</em></p>
+<p>​       校验位P<sub>i</sub>的海明位号位2<sup>i-1</sup>的位置上，其余各位为信息位，因此有：</p>
+<ul>
+<li>
+<p>P<sub>1</sub>的海明位号为2<sup>i-1</sup>=2<sup>0</sup>=1,即H<sub>1</sub>为P<sub>1</sub>;</p>
+</li>
+<li>
+<p>P<sub>2</sub>的海明位号位2<sup>i-1</sup>=2<sup>1</sup>=2，即即H<sub>2</sub>为P<sub>2</sub>;</p>
+</li>
+<li>P<sub>3</sub>的海明位号位2<sup>i-1</sup>=2<sup>2</sup>=4，即即H<sub>4</sub>为P<sub>3</sub>;</li>
+</ul>
+<p>将信息位安装原来插入顺序插入，则海明码各位分布如下：</p>
+<center>H<sub>7</sub> H<sub>6</sub> H<sub>5</sub> H<sub>4</sub> H<sub>3</sub> H<sub>2</sub> H<sub>1</sub> </center>
+
+<center>D<sub>4</sub> D<sub>3</sub> D<sub>2</sub> P<sub>3</sub> H<sub>3</sub> D<sub>1</sub> P<sub>1</sub> </center>
+
+<p>​   <em>第三步：分组以形成校验关系</em></p>
+<p>​        每个数据位用多个校验位进行校验，但要满足条件：被检验数据位的海明位号等于校验该数据的各教研位海明位号之和。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/07/iQqNmwrKpLysOtx.png" /></p>
+<p>​   <em>第四步：校验位取值</em></p>
+<p>​       校验位P<sub>i</sub>的值为第i组（由该校验位校验的数据位）所有位求异或。根据地三步：</p>
+<p><img src="https://i.loli.net/2021/07/07/XvHeAflhc86Roma.png" style="zoom:50%;" /></p>
+<p>所以，1010对应的海明码为<strong>101<u>0</u>0<u>10</u></strong>（下划线为校验位，其他为信息位）。</p>
+<p>​   <em>第五步：海明码的校验原理</em></p>
+<p>​       每个校验组分别利用校验位和参与形成该校验的信息位进行奇偶校验查，构成k个校验方程：</p>
+<p><img src="https://i.loli.net/2021/07/07/QvICw92rnlyi5XT.png" style="zoom:50%;" /></p>
+<p>​   若S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>的值为“000”，则说明无错；否则说明出错，且这个数就是错误位的位号，如S<sub>3</sub>S<sub>2</sub>S<sub>1</sub>=001，说明第1位出错，即H<sub>1</sub>出错，直接将该位取反就达到了纠错的目的。</p>
+<h5 id="23-crc">2.3 循环冗余校验（CRC）码</h5>
+<p>​   CRC基本思想：在K位信息码后再拼接R位的校验码，整个编码长度位N位，</p>
+<p><img src="https://i.loli.net/2021/07/07/hEVRq9K5YN8UjaM.png" style="zoom:67%;" /></p>
+<p>CRC码基于线性编码理论，在发送端将要传送的K位二进制代码左移R位，将它生成多项式G(x)做模2除法。</p>
+<p>​   生成一个R位校验码，并附在信息码后，构成一个新的二进制码（CRC码），共K+R位。在接收端，利用生成的多项式对接收到的编码做模2除法，以检测和确定出错的位置，如无错则整除，其中生成多项式是接收端和发送端一个约定。</p>
+<p>【例】设生成多项式为<span class="arithmatex">\(G(x)=x^3+x^2+1\)</span>,信息码为101001，求对应的CRC码。</p>
+<p>【解】R=生成多项式最高幂次=3，K=信息码长度=6，N=K+R=9，生产多项式G（x）对应的二进制码为1101。</p>
+<p>​   ① 移位</p>
+<p>​   将原信息码左移R位，低位补0，得到101001<u>000</u> ；</p>
+<p>​   ②相除</p>
+<p>​   得到移位后的信息码后，用多项式进行模2除法，产生余数。（模2除法：每一位除（减）的结果不影响其他位）</p>
+<p><img src="https://i.loli.net/2021/07/07/JOivEe5UWfglRnd.png" style="zoom: 67%;" /></p>
+<ul>
+<li>
+<p>用除数对被除数最高位做模2减（异或），不错位；</p>
+</li>
+<li>
+<p>除数右移一位，若余数最高位为1，商为1，并对余数做模2减。若余数最高位为0，商为0，除数继续右移一位。</p>
+</li>
+<li>
+<p>循环直到余数位数小于除数时，该余数为最终余数。</p>
+</li>
+</ul>
+<p>③检错和纠错</p>
+<p>​    接收端收到CRC码，用生成多项式G(x)做模2除法，若余数为0，则码字无错。</p>
+<p>​    若接收端接收端CRC码为C<sub>9</sub>C<sub>8</sub>C<sub>7</sub>C<sub>6</sub>C<sub>5</sub>C<sub>4</sub>C<sub>3</sub>C<sub>2</sub>C<sub>1</sub>=101001<strong>011</strong>,将这个数据与1101进行模2除法，得到余数010，说明C<sub>2</sub>出错,将其取反即可。</p>
+<h3 id="3">3. 定点数的表示和运算</h3>
+<h5 id="31">3.1 无符号与有符号</h5>
+<ul>
+<li><strong>无符号：</strong>指整个机器字长的全部二进制位均为数值位，没有符号位，相当于数的绝对值。</li>
+</ul>
+<p>若机器字长为8位，则数的表示范围位0～2<sup>8</sup>-1,即0～255。</p>
+<ul>
+<li><strong>有符号：</strong>在计算机中，数的“正”“负”号是无法识别的，有符号数用“0”表示“正”号，用“1”表示“负”号，从而将符号也数值化，并通常约定二进制数的<strong>最高位为符号位</strong>，即将符号位放在有效数字前面，组成有符号数。</li>
+</ul>
+<h5 id="32">3.2 机器数的顶点表示</h5>
+<p>​   计算机中通常采用两种简单的约定：将小数点的位置固定在数据的最高位之前，或固定在最低位之后。一般常称前者为定点小数，后者为定点整数。</p>
+<ul>
+<li>定点小数</li>
+</ul>
+<p>​ 纯小数，约定小数点位置在符号位之后、有效数值位最高位之前。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/07/4xAtrj9SOsV6uvw.png" /></p>
+<p>​       当x<sub>0</sub>=0，x<sub>1</sub>~x<sub>n</sub>均为1时，X为其所能表示的最大正整数，真值等于1-2<sup>-n</sup>;</p>
+<p>​       当x<sub>0</sub>=1，x<sub>1</sub>~x<sub>n</sub>均为1时，X为其(原码)所能表示的最小负数，真值等于-(1-2<sup>-n</sup>);</p>
+<ul>
+<li>定点整数</li>
+</ul>
+<p>​    定点整数是纯整数，约定小数点点位置在有效数值部分最低位之后，若数值X的形式为X=x<sub>0</sub>x<sub>1</sub>x<sub>2</sub>...x<sub>n</sub>(其中x<sub>0</sub>为符号位，x<sub>1</sub>是尾数，x<sub>n</sub>为最低有效位)。</p>
+<p>​   <img alt="" src="https://i.loli.net/2021/07/07/KamR3gN5oL2XGjP.png" /></p>
+<p>​       当x<sub>0</sub>=0，x<sub>1</sub>~x<sub>n</sub>均为1时，X为其所能表示的最大正整数，真值等于2<sup>n</sub>-1;</p>
+<p>​       当x<sub>0</sub>=1，x<sub>1</sub>~x<sub>n</sub>均为1时，X为其(原码)所能表示的最小负数，真值等于-(1-2<sup>-n</sup>);</p>
+<h5 id="33">3.3 原码、补码、反码、移码</h5>
+<p>原码、补码、反码间的转换：</p>
+<p><img alt="" src="https://i.loli.net/2021/07/07/USTNYz6H413o27a.png" /></p>
+<p><strong>移码</strong></p>
+<p>​    在真值X上加上一个常数（偏置值），通常这个常数取2<sup>n</sup>,相当于X在数轴上向正向偏移了若干单位。定义为：
+$$
+[x]_移=2^n+x \  (2^n&gt;x\geq -2^n,其中机器字长为n+1)
+$$
+例如，若正数x<sub>1</sub>=+10101，x<sub>2</sub>=-10101，字长为8位，则其移码表示为：[x<sub>1</sub>]<sub>移</sub>=2<sup>7</sup>+10101=1,0010101;[x<sub>2</sub>]<sub>移</sub>=2<sup>7</sup>-10101=0,1101011;</p>
+<p>移码具有以下特点：</p>
+<ul>
+<li>移码中的0表示唯一；</li>
+<li>真值的移码和补码仅差一个符号位，[x]<sub>补</sub>的符号位取反即得[x]<sub>移</sub>；</li>
+<li>移码全0时，对应真值的最小值-2<sup>n</sup>；移码全为1时，对应真值最大值为2<sup>n</sup>-1;</li>
+<li>
+<p>移码保持了数据原有的大小顺序，移码大真值就大，移码小真值就小。</p>
+</li>
+<li>
+<p>移码保持了数据原有的大小顺序，移码大的真值就大，移码小的真值就小。</p>
+</li>
+</ul>
+<h5 id="34">3.4 定点数的运算</h5>
+<ul>
+<li>算数移位</li>
+</ul>
+<p>对象为有符号数，在移位过程中符号位保持不变。</p>
+<p><strong>移位后空位填补规则</strong></p>
+<ul>
+<li>
+<p>对于正数，[x]<sub>移</sub>=[x]<sub>补</sub>=[x]<sub>反</sub>=真值，因此移位后出现的空位均以0添之；</p>
+</li>
+<li>
+<p>对于负数</p>
+<p><img alt="" src="https://i.loli.net/2021/07/07/52nyqM6kd3xZIsi.png" /></p>
+</li>
+</ul>
+<p>​    对于原码，左移一位若不产生溢出，相当于乘以2，右移一位，若不考虑因移出而舍去的末位尾数，相当于除以2。</p>
+<ul>
+<li>逻辑移位</li>
+</ul>
+<p>​    逻辑移位将操作数视为无符号数，移位规则：逻辑左移时，高位移丢，低位添0；逻辑右移时，低位移丢，高位添0；（<strong>不管左移右移，都添0</strong>）；</p>
+<ul>
+<li>循环移位</li>
+</ul>
+<p>​     循环移位分为<strong>带进位标志</strong>位CF的循环移位（大循环）和不带进位标志位大循环移位（小循环）。</p>
+<p>​ 循环移位的主要特点是，移出的数位又被移入数据中，而是否带进位标志位加入循环位移。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/07/Nam8w9lsZ6BxFT3.png" /></p>
+<p>循环移位操作适合将数据的低字节数据和高字节数据互换。</p>
+<h5 id="35">3.5 原码定点数的加减法运算</h5>
+<p>设[X]<sub>原</sub>=x<sub>s</sub>x<sub>1</sub>x<sub>2</sub>...x<sub>n</sub>和[Y]<sub>原</sub>=y<sub>s</sub>y<sub>1</sub>y<sub>2</sub>...y<sub>n</sub>,进行加减运算规则如下：</p>
+<ul>
+<li><strong>加法规则：</strong></li>
+</ul>
+<p>​    先判断符号位，若相同，则绝对值相加，符号位不变；若不同，则做减法，绝对值大的数减去绝对值小的数，结果符号位与绝对值的数相同。</p>
+<ul>
+<li><strong>减法规则：</strong></li>
+</ul>
+<p>​ 两个原码表示数相减，首先将减数符号取反，然后将被减数与符号取反后的减数按照原码加法进行运算。</p>
+<p>【注：运算时注意机器字长，当左边出现溢出，将溢出位丢掉。】</p>
+<h5 id="36">3.6 补码定点数加减法运算</h5>
+<p>补码加减法运算规则简单，易于实现，所以计算机系统中普遍采用补码加减运算。补码运算的特点如下：</p>
+<ul>
+<li>
+<p>参与运算的两个操作数均用补码表示；</p>
+</li>
+<li>
+<p>按二进制运算规则运算，逢二进一；</p>
+</li>
+<li>
+<p>符号位与数值位按同样规则参与运算，符号位运算产生的进位要丢掉，结果的符号位由运算得出；</p>
+</li>
+<li>
+<p>补码加减运算依据由下面公式进行。当参加运算的数是定点小数时，模M=2；当参与运算的数是定点整数时，模M=2<sup>n+1</sup>。（Mod M运算是为了将溢出位丢掉。）</p>
+</li>
+</ul>
+<p>也就是说，若做加法，则两数补码直接相加；若做减法，则将被减数与减数的机器负数相加。</p>
+<ul>
+<li>补码运算结果也是补码。</li>
+</ul>
+<p>【例】设机器字长为8位（含1位符号位），A=15，B=24，求[A+B]<sub>补</sub>和[A-B]<sub>补</sub>。</p>
+<p><img alt="截屏2021-07-08 上午9.07.36" src="https://i.loli.net/2021/07/08/7aTFgMe89LNVkJt.png" /></p>
+<h5 id="37">3.7 符号位扩展</h5>
+<p>​   如某程序要将一个8位数与另一个32位数进行相加，在相加之前，需要将8进制位数转化为32位数形式，称为“符号扩展”。</p>
+<ul>
+<li>正数扩展</li>
+</ul>
+<p>​    在原有形式的符号位移动到新形式的符号位上，<strong>新表示形式的所有附加位都用0进行扩充。</strong></p>
+<ul>
+<li>负数扩展</li>
+</ul>
+<p>​ 根据机器数的不同而不同。原码表示负数的符号扩展方法与正数相同，只不过此时符号位为1。</p>
+<p>​ <strong>补码表示负数的符号位扩展方法：</strong>原有形式的符号位移动到新形式的符号位上，<strong>新表示形式的所有附加位都用1（对整数）或0（对小数）进行填充。</strong></p>
+<p>​    <strong>反码表示负数的符号位扩展方法：</strong>原有形式的符号位移动到新形式的符号位上，<strong>新表示形式的所有附加位都用1进行填充。</strong></p>
+<h5 id="38">3.8 溢出的概念和判别方法</h5>
+<p>​   溢出是指运算结果超过了数的表示范围。通常，大于机器所能表示的最大正数称为上溢，小于机器所能表示的最小负数称为下溢。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/08/zaZFKQ6l8kS2fyW.png" /></p>
+<p>仅当两个符号位相同的数相加或两个符号位相异的数相减才可能产生溢出；补码定点数加减运算溢出判别的三种方法：</p>
+<ul>
+<li>采用一位符号位</li>
+</ul>
+<p>​        由于减法运算在机器中是用加法实现的，因此无论是加法还是减法，只要参加操作的两个数符号相同，结果又与原操作数符号位不同，则表示结果溢出：</p>
+<p>​     设A符号位为A<sub>s</sub>，B的符号位为B<sub>s</sub>，运算结果的符号位为S<sub>s</sub>,则溢出的表达式为
+  $$
+  V=A_{s}B_{s}\overline{S_{s}} -\overline{A_{s}B_{s}} S_{s}
+  $$
+  若V=0，表示无溢出；若V=1，表示有溢出。</p>
+<ul>
+<li>采用双符号位</li>
+</ul>
+<p>​        双符号位也称模4补码。匀速结果的两个符号位S<sub>s1</sub>S<sub>s2</sub>相同，表示未溢出；<strong>运算结果的符号位S<sub>s1</sub>S<sub>s2</sub>不同，表示溢出，此时最高位符号位表示真正的符号</strong>。</p>
+<ul>
+<li>S<sub>s1</sub>S<sub>s2</sub>=00，表示正数，未溢出；</li>
+<li>S<sub>s1</sub>S<sub>s2</sub>=01，表示正数溢出；</li>
+<li>S<sub>s1</sub>S<sub>s2</sub>=10，表示负数溢出；</li>
+<li>
+<p>S<sub>s1</sub>S<sub>s2</sub>=11，表示负数未溢出；</p>
+</li>
+<li>
+<p>采用一位符号位根据数据位的进位情况判断溢出</p>
+</li>
+</ul>
+<p>​    若符号位的进位C<sub>s</sub>与最高位的进位C<sub>1</sub>相同，则说明没有溢出，否则表示发生溢出。溢出逻辑判断表达式为<span class="arithmatex">\(V=C_s\oplus C_s\)</span>，若V=0，则表示无溢出；V=1，表示有溢出。</p>
+<h5 id="39">3.9 定点数的乘法运算</h5>
+<p>​   在计算机中，除法运算可转换成“累加-左移”（逻辑左移），根据机器数的不同，可分为原码除法和补码除法。</p>
+<ul>
+<li>原码一位乘法</li>
+</ul>
+<p><img alt="" src="https://i.loli.net/2021/07/13/Pr8D9op2aC3BwKV.jpg" /></p>
+<ul>
+<li>补码乘法</li>
+</ul>
+<p><img alt="" src="https://i.loli.net/2021/07/13/fMQHkYNAL9lStbT.jpg" /></p>
+<h5 id="310">3.10 定点数的除法运算</h5>
+<p>​   在计算机中，除法运算可转换成“累加-左移”（逻辑左移），根据机器数的不同，可分为原码除法和补码除法。</p>
+<ul>
+<li>原码除法运算（不恢复余数法）</li>
+</ul>
+<p><img alt="" src="https://i.loli.net/2021/07/13/sU2ALGaPf8FCeKO.jpg" /></p>
+<ul>
+<li>补码除法运算（加减交替法）</li>
+</ul>
+<p><img alt="" src="https://i.loli.net/2021/07/13/MTa6ymBQJxcVCzr.jpg" /></p>
+<p><strong>总结：</strong></p>
+<p><img alt="" src="https://i.loli.net/2021/07/08/DItM2gKC8Av1NjT.png" /></p>
+<h3 id="4-c">4. C语言中整数类型及类型转换</h3>
+<h5 id="41">4.1 有符号数和无符号数数的转换</h5>
+<p>​    将<code>short x = -4321</code>类型转化<code>unsigned short</code>类型结果为<code>unsigned short y = 61215</code>。</p>
+<p>转化规则如表所示：</p>
+<p><img alt="" src="https://i.loli.net/2021/07/08/U3VClmjovkTzOQP.png" /></p>
+<p>​    由表可看出，将<code>short int</code>强制转换为<code>unsigned short</code>只改变数值，而两个变量对应的每一位都是一样的，所以可知：<strong>强制类型转换的结果保持位值不变，仅改变了解释这些位的方式。</strong></p>
+<p>再如，将<code>unsigned short x=65535</code>转化为<code>short</code>类型的变量<code>y</code>：
+$$
+x=65535\qquad y=-1
+$$</p>
+<h5 id="42">4.2 不同字长整数之间的转换</h5>
+<ul>
+<li>高字节向低字节转换</li>
+</ul>
+<p>​        结果如下：
+$$
+(int)x=165537 \quad -&gt;\quad  (short)y=-31071\
+(int)u=-34991 \quad -&gt;\quad (short)v=30545\
+$$
+其中,x、y、u、v十六进制表示分别为<code>0x000286a1</code>、<code>0x86a1</code>、<code>0xffff7751</code>、<code>0x7751</code>，观察上述数字可知：<strong>当大字长变量向小字长变量强制类型转换时，系统把多余的高位字长部分直接截断，低位直接赋值，以此来保持位值。</strong></p>
+<ul>
+<li>低字节向高字节转换</li>
+</ul>
+<p>​        结果如下：
+$$
+(int)x=-4321 \quad -&gt;\quad  (short)y=-4321\
+(int)u=61215 \quad -&gt;\quad (short)v=61215\
+$$
+x、y、u、v用十六进制分别表示为<code>0xef1f</code>、<code>0xffffef1f</code>、<code>0xef1f</code>、<code>0x0000ef1f</code>,由本例可知：<strong>短字长整数到长字长整数的转换，不仅对应位值相等，高位部分还会扩展为原数字的符号位。</strong></p>
+<h3 id="5">5.数据的存储和排序</h3>
+<h5 id="51">5.1 数据的大端方式和小端方式的存储</h5>
+<p>​   在存储数据时，数据可以从低位到高位按从左到右排序，也可以从右到左排序。因此，无法用最左或最右来表征数据最高位或最低位，通常用最低有效字节（LSB）和最高有效字节（MSB）来标示最高位和最低位。</p>
+<p>​   例如，在32位计算机中，一个int型变量i的机器数为01 23 45 67H，其最高有效字节MSB=01H，最低有效字节LSB=67H。</p>
+<p>​   现代计算机基本采用字节编址，即每个地址编号中存放一个字节。不同类型占用的字节数不同，<code>int</code>和<code>float</code>占4字节，<code>double</code>型数据占8字节，而程序中每个数据只给定一个地址。</p>
+<p>​   多字节数据都存放在连续的字节序列中，根据数据中各字节在连续字节序列中的排列顺序不同，可以采用两种排列方式：<strong>大端方式</strong>和<strong>小端方式</strong>。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/08/rmSBvbxH4TU589d.png" /></p>
+<ul>
+<li><strong>大端方式</strong>：按从最高有效字节到最低有效字节顺序存储数据，即最高有效字节存放在前面；</li>
+<li><strong>小端方式</strong>：按从最低有效字节到最低有效字节顺序存储数据，即最低有效字节存放在前面；</li>
+</ul>
+<p>在检查底层机器级代码时，需要分清各类型数据字节序列的顺序，例如以下由反汇编器的逆过程将机器级代码转换为汇编代码：
+$$
+4004d3:01\quad05\quad64\quad94\quad04\quad08\qquad\quad add\quad\%eax,0x8049464
+$$
+<code>"4004d3"</code>是十六进制表示的地址，<code>01 05 43 0b 20 00</code>是指令机器代码，<code>"add %eax,0x8049464"</code>是指令的汇编形式，该指令的第二个操作数是一个立即数 <code>0x8049464</code>。</p>
+<p>​   在执行指令时，从指令代码的后4字节中取出该立即数，立即数，立即数存放的字节序列为64H、94H、04H、08H，正好与操作数的字节顺序相反，即采用的小端方式存储，得到08049464H，去掉开头的0，得到值0x8049464。</p>
+<h5 id="52">5.2 数据按“边界对齐”方式存储</h5>
+<p>​   假设存储字长为32位，可按字节、半字和字寻址。对于机器字长位32位计算机，数据以边界对齐方式存放，半字地址一定是2的整数倍，字地址一定是4的整数倍，这样无论所取的数据是字节、半字还是字，均可一次访存取出。</p>
+<p>​   数据不按边界对齐方式存储时，可以充分利用存储空间，但半字长或字长的指令可能会存储在两个存储字中，此时需要两次访存，并且对高低字节的位置进行调整，连接之后才能得到所要的指令或数据，从而影响了指令的执行效率。</p>
+<p>例如，“字节1、字节2、字节3、半字1、半字2、半字3、字1”的数据按序放在存储器中，按边界对齐的方式如下：</p>
+<p><img alt="" src="https://i.loli.net/2021/07/08/kfWsxFRoULHdQwM.png" /></p>
+<p>不对齐方式：</p>
+<p><img alt="" src="https://i.loli.net/2021/07/08/9gnlR2zTWqtvB7P.png" /></p>
+<p>边界对齐方式相对边界不对齐方式是一种空间换时间的思想。</p>
+<h3 id="6-alu">6. 算数逻辑单元（ALU）</h3>
+<p>​   在计算机中，运算器承担可执行各种算数逻辑运算的工作，运算器由算术逻辑单元、累加器、状态寄存器和通用寄存器组等组成。</p>
+<p>​   ALU的基本功能包括加、减、乘、除四则运算，与、或、非、异或等逻辑运算，以及移位、求补等操作。</p>
+<h5 id="61">6.1 串行加法器和并行加法器</h5>
+<p>​   <strong>一位全加器（FA）：</strong></p>
+<p>​       全加器（FA）是最基本的加法单元，有加数A<sub>i</sub>、加数B<sub>i</sub>与低位传来的进位C<sub>i-1</sub>共三个输入，有本位和S<sub>i</sub>与向高位的进位C<sub>i</sub>共两个输出。</p>
+<p>逻辑表达式如下：</p>
+<ul>
+<li>和表达式：</li>
+</ul>
+<div class="arithmatex">\[
+S_{i}=A_{i}\oplus B_{i}\oplus C_{i-1}
+\]</div>
+<ul>
+<li>进位表达式：</li>
+</ul>
+<div class="arithmatex">\[
+C_{i}=A_{i}B_{i}+\left( A_{i}\oplus B_{i}\right)  C_{i-1}
+\]</div>
+<p>一位全加器对应的逻辑结构如下图：</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/tTPCwnVEuHNdoLy.png" /></p>
+<p>​       <strong>串行加法器：</strong></p>
+<p>​   在串行加法器中，只有一个全加器，数据逐位送入加法器中进行运算。若操作数长n位，则加法就要分n次进行，每次产生一位和，并且串行逐位地送回寄存器。</p>
+<p>特点：器件少、成本低，但运算速度慢，多用于某些低速专用运算器。</p>
+<p>​       <strong>并行加法器：</strong></p>
+<p>​   并行加法器由多个全加器构成，其位数与机器的字长相同，各位数据同时运算。并行加法器的最长运算时间主要是由进位信号的传递时间决定，而每个全加器本身求和延迟只是次要因素。</p>
+<ul>
+<li>并行加法器的进位产生和传递如下：</li>
+</ul>
+<p>​   并行加法器中每个全加器都有一个从低位送来的进位输入和一个传送给高位的进位输出，通常将传递的进位信号和逻辑路线连接起来构成进位网络称为进位链。</p>
+<p>​   进位表达式：
+$$
+C_{i}=G_{i}+P_{i}C_{i-1}\left( G_{i}=1或P_{i}C_{i-1}=1时，C_i=1\right)<br />
+$$
+​   其中，<span class="arithmatex">\(G_i\)</span>是进位产生函数，<span class="arithmatex">\(G_i=A_iB_i\)</span>;<span class="arithmatex">\(P_i\)</span>是进位传递函数，<span class="arithmatex">\(P_i=A_i\oplus B_i\)</span>。</p>
+<p>​       并行加法器的进位通常分为<strong>串行进位</strong>与<strong>并行进位</strong>。</p>
+<p>​      <strong>a. 串行进位</strong></p>
+<p>​      把n个全加器串接起来，就可进行两个n位数的相加，这种加法器串称为串行进位和并行加法器。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/UM9yojNWHJZdgwY.png" /></p>
+<p>其中</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/Zca6IV2bloezLEU.png" /></p>
+<p>​   可见，低位产生进位所需时间可能影响直至高位运算的时间，并行加法器最长运算时间是由进位信号传递时间决定的，位数越多延迟时间越长。</p>
+<p>​      <strong>b. 并行进位</strong></p>
+<p>​   并行进位又称为先行进位、同时进位，特点是各级进位信号同时形成。</p>
+<p>各进位信号表达式如下：</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/YVEWIHGO2kFoLNm.png" /></p>
+<p>​   上述格式种所有进位输出仅由<span class="arithmatex">\(G_i\)</span>、<span class="arithmatex">\(P_i\)</span>及低位进位输入<span class="arithmatex">\(C_0\)</span>决定，而不依赖于其低位进位输入<span class="arithmatex">\(C_{i-1}\)</span>,因此各级进位输出可以同时产生。</p>
+<p>​   但随着加法器位数的增加，<span class="arithmatex">\(C_i\)</span>的逻辑表达式会变得越来越长，输入变量会越来越多，这会使电路结构 变得越来越复杂，所以完全采用并行进位是不现实的。</p>
+<p>​      <strong>c. 分组并行进位</strong></p>
+<p>​   通常会采用分组并行进位的方式。这种方式把n位全加器分为若干小组，小组内各位之间并行快速进位，小组与小组间采用串行进位方式，也可以采用并行快速进位方式，因此有以下两种情况：</p>
+<ul>
+<li>单级先行进位方式，又称组内并行、组间串行。</li>
+</ul>
+<p><img alt="" src="https://i.loli.net/2021/07/14/QKoq9DfJHamp2lc.png" /></p>
+<p>​   C<sub>1</sub>~C<sub>4</sub>是同时产生的，实现上述进位逻辑函数的电路称为4位先行进位逻辑电路。</p>
+<ul>
+<li>多级先行进位方式。又称为组内串行、组间并行进位方式。以16字长的加法器为例：</li>
+</ul>
+<p><img alt="" src="https://i.loli.net/2021/07/14/aEq5mZFGvr4HCgL.png" /></p>
+<p>​    这种电路称为组先行进位电路（BCLA）。利用这种4位的BCLA电路及进位产生与传递电路和求和电路可以构成4位BCLA加法器。16位两极先行进位加法器可由4个BCLA加法器和1个CLA电路构成：</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/xZy4E8AcBHwtYzu.png" /></p>
+<p>​    这种方法可以扩展到多于两极的先行进位加法器，如用三级先行进位结构设计64位加法器。这种加法器优点是对加法时间影响甚小；缺点是造价高。</p>
+<h5 id="62">6.2 算数逻辑单元的功能和构造</h5>
+<p>​   ALU是一种功能很强的逻辑电路，它能进行多种算术运算和逻辑啊运算。由于加、减、乘、除最终都能归结为加法运算，因此ALU核心应是一个<strong>并行加法器</strong>，同时也能执行"与"、“或”、“非”等逻辑运算。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/lTJeQPBxhbWYqfs.png" /></p>
+<p>​   左边为ALU的基本结构：A<sub>i</sub>和B<sub>i</sub>为输入变量；K<sub>i</sub>为控制信号，K<sub>i</sub>的不同取值可决定该电路做哪种算数运算和哪种逻辑运算。</p>
+<p>​   右边为4位ALU芯片（74181），它能执行16种算术运算和16种逻辑运算，可工作与正/负逻辑操作方式喜爱。M的值用来区分算术运算 （M=0）和逻辑运算（M=1），S<sub>3</sub>~S<sub>0</sub>的不同取值可实现不同操作。例如，在负逻辑下，当M=1、S<sub>3</sub>～S<sub>0</sub>=1001时，做逻辑运算<span class="arithmatex">\(A\oplus B\)</span>。</p>
+<p>74181为4位并行加法器，其4位进位是同时产生的，用4片74181芯片可组成16位ALU。其片内进位是快速的，但片间进位是逐片传递的，即组内并行（74181片内）、组间串行（74181片间）。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/1MP3c54zednr29O.png" /></p>
+<p>​   若把16位ALU中每4位作为一组，即将74181与74182芯片（先行进位芯片）配合，用类似位间快速进位方式实现16位ALU（4片ALU组成），则能得到16位两极先行进位ALU，即组内并行（74181内）、组间并行（74181片间）。</p>
+<p><img alt="" src="https://i.loli.net/2021/07/14/4GM3SpCQbNPuhr9.png" /></p>
+<p>【统考对电路要求并不高，且本节不属于重点内容，所以不必过分深究。】</p>
+<p>​   与74181类似的片位式芯片有Am2901，此芯片也是4位并行加法器，可以和先行进位芯片Am2902配合，而且芯片内有16个16位寄存器，因此也称片位式运算器。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
