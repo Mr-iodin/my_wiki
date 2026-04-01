@@ -1,6 +1,7 @@
 site_name: 简历
 nav:
   - About me: index.md
+  - "毕业论文": 毕业论文.md
   - "算法":
      'STL库':
        - STL库/sort自定义排序.md
