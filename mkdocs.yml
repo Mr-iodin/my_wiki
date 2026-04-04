@@ -64,7 +64,8 @@ nav:
        - 项目汇总/岩石荧光区域分割/详细方案.md
      涉疫地面自动提取:
        - 项目汇总/基于Bi-LSTM-CRF命名实体识别涉疫地名自动提取.md
-
+     八位虚拟机实现:
+       - 项目汇总/八位虚拟机实现技术文档（完整）.md
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
