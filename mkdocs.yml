@@ -1,7 +1,9 @@
-site_name: 简历
+site_name: localhost:8080
 nav:
-  - About me: index.md
-  - "毕业论文": 毕业论文.md
+  - "~/.notes": index.md
+  - "2026":
+      '八月':
+       - 2026/八月/单目标跟踪文献简读.md
   - "算法":
      'STL库':
        - STL库/sort自定义排序.md
@@ -66,6 +68,9 @@ nav:
        - 项目汇总/基于Bi-LSTM-CRF命名实体识别涉疫地名自动提取.md
      八位虚拟机实现:
        - 项目汇总/八位虚拟机实现技术文档（完整）.md
+     基于语义分割管道缺陷识别:
+       - 项目汇总/管道缺陷识别.md
+
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -78,3 +83,14 @@ theme:
   palette:
     primary: 'black'
     accent: 'indigo'
+
+extra:
+  social:
+    - icon: fontawesome/solid/envelope # 邮箱图标
+      link: mailto:suneann@outlook.com
+      name: suneann # (可选) 鼠标悬停时显示的文字
+  status:
+    new: "新增的内容"
+    deprecated: "请此内容已过时" 
+
+  generator: false #删除左下角
