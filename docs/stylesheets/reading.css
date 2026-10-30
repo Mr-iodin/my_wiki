@@ -77,11 +77,11 @@
   }
 
   .wiki-nav-collapsed .md-main .md-content__inner {
-    width: min(940px, calc(100% - 13rem));
+    width: min(1000px, calc(100% - 10.5rem));
     max-width: none;
     margin-left: auto !important;
     margin-right: auto !important;
-    transform: translateX(6.05rem);
+    transform: translateX(clamp(4.8rem, 7vw, 6.05rem));
   }
 }
 
