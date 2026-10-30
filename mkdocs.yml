@@ -2,11 +2,12 @@ site_name: localhost:8080
 nav:
   - "~/.notes": index.md
   - "2026":
-     - '八月':
+     - 跟踪:
        - 2026/Track跟踪框架搭建 一.md
        - 2026/Track跟踪框架搭建 二.md
-       - 2026/AI+心理学文献整理 .md
        - 2026/单目标跟踪文献简读.md
+     - 大模型:
+       - 2026/AI+心理学文献整理 .md
        - 2026/ENPMR-Bench 文献阅读.md
        - 2026/ENPMR-Bench Data&Evaluation Script.md
 
@@ -82,6 +83,7 @@ markdown_extensions:
       generic: true
 extra_css:
   - stylesheets/navigation-toggle.css
+  - stylesheets/reading.css
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
   - javascreipts/navigation-toggle.js

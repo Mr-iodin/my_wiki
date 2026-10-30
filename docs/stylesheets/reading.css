@@ -1,0 +1,78 @@
+/* Keep the article close to Typora's Github reading theme. */
+.md-grid {
+  max-width: 72rem;
+}
+
+.md-typeset {
+  color: #333;
+  font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: normal;
+  margin: 1em 0;
+}
+
+.md-typeset h1 {
+  border-bottom: 1px solid #eee;
+  font-size: 2.25em;
+  line-height: 1.2;
+  padding-bottom: 0.3em;
+}
+
+.md-typeset h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 1.75em;
+  line-height: 1.225;
+  padding-bottom: 0.3em;
+}
+
+.md-typeset h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.md-typeset h4 {
+  font-size: 1.25em;
+}
+
+.md-typeset p,
+.md-typeset blockquote,
+.md-typeset ul,
+.md-typeset ol,
+.md-typeset table {
+  margin: 0.8em 0;
+}
+
+.md-typeset blockquote {
+  border-left: 4px solid #dfe2e5;
+  color: #777;
+  padding: 0 1em;
+}
+
+.md-typeset a {
+  color: #4183c4;
+}
+
+.md-typeset img {
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-main .md-content__inner {
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
