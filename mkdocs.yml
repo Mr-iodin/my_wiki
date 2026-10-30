@@ -6,6 +6,9 @@ nav:
        - 2026/八月/Track跟踪框架搭建.md 
        - 2026/八月/AI+心理学文献整理 .md
        - 2026/八月/单目标跟踪文献简读.md
+       - 2026/八月/ENPMR-Bench 文献阅读.md
+       - 2026/八月/ENPMR-Bench Data&Evaluation Script.md
+
   - "算法":
      'STL库':
        - STL库/sort自定义排序.md
