@@ -80,8 +80,11 @@ nav:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+extra_css:
+  - stylesheets/navigation-toggle.css
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - javascreipts/navigation-toggle.js
 
 
 theme:
