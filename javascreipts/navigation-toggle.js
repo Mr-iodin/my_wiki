@@ -14,9 +14,13 @@
       "wiki-nav-collapsed",
       collapsed && desktop.matches
     );
-    const label = collapsed ? "展开左侧导航" : "收起左侧导航";
-    button.setAttribute("aria-label", label);
-    button.title = label;
+    const label = collapsed ? "显示导航" : "专注阅读";
+    const description = collapsed
+      ? "显示左侧导航"
+      : "收起左侧导航，展开阅读区域";
+    button.querySelector(".wiki-nav-toggle__label").textContent = label;
+    button.setAttribute("aria-label", description);
+    button.title = description;
     button.setAttribute("aria-expanded", String(!collapsed));
     button
       .querySelector(".wiki-nav-toggle__arrow")
@@ -40,7 +44,7 @@
         '<rect x="3" y="4" width="18" height="16" rx="2"></rect>' +
         '<path d="M9 4v16"></path>' +
         '<path class="wiki-nav-toggle__arrow" d="m16 9-3 3 3 3"></path>' +
-        "</svg>";
+        '</svg><span class="wiki-nav-toggle__label"></span>';
       button.setAttribute("aria-controls", sidebar.id);
       button.addEventListener("click", function () {
         collapsed = !collapsed;
