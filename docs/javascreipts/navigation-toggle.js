@@ -14,8 +14,13 @@
       "wiki-nav-collapsed",
       collapsed && desktop.matches
     );
-    button.textContent = collapsed ? "显示导航" : "收起导航";
+    const label = collapsed ? "展开左侧导航" : "收起左侧导航";
+    button.setAttribute("aria-label", label);
+    button.title = label;
     button.setAttribute("aria-expanded", String(!collapsed));
+    button
+      .querySelector(".wiki-nav-toggle__arrow")
+      .setAttribute("d", collapsed ? "m13 9 3 3-3 3" : "m16 9-3 3 3 3");
   }
 
   function initialize() {
@@ -30,6 +35,12 @@
       button.id = "wiki-nav-toggle";
       button.type = "button";
       button.className = "wiki-nav-toggle";
+      button.innerHTML =
+        '<svg class="wiki-nav-toggle__icon" viewBox="0 0 24 24" aria-hidden="true">' +
+        '<rect x="3" y="4" width="18" height="16" rx="2"></rect>' +
+        '<path d="M9 4v16"></path>' +
+        '<path class="wiki-nav-toggle__arrow" d="m16 9-3 3 3 3"></path>' +
+        "</svg>";
       button.setAttribute("aria-controls", sidebar.id);
       button.addEventListener("click", function () {
         collapsed = !collapsed;

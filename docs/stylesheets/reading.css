@@ -76,3 +76,36 @@
     margin-right: auto;
   }
 }
+
+/* Center media only in the two ENPMR-Bench articles that opt in. */
+.md-typeset .centered-media-page ~ p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-typeset .centered-media-page ~ table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-typeset .centered-media-page ~ .md-typeset__scrollwrap {
+  display: flex;
+  justify-content: safe center;
+}
+
+.md-typeset .centered-media-page ~ .md-typeset__scrollwrap .md-typeset__table {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.md-typeset .centered-media-page ~ .md-typeset__scrollwrap table {
+  table-layout: fixed;
+}
+
+.md-typeset .centered-media-page ~ .md-typeset__scrollwrap th,
+.md-typeset .centered-media-page ~ .md-typeset__scrollwrap td {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}

@@ -1,5 +1,7 @@
 # ENPMR-Bench 
 
+<div class="centered-media-page" hidden></div>
+
 **ENPMR-Bench 的主要贡献是提出并诊断一种新的记忆检索任务，而不是提出一个新的记忆模型。**它问的是：用户没有指明要回忆什么时，Agent能否理解其潜在情感需求，主动选出合适的个人记忆，并用它给出支持性回答。
 
 它的关键发现是：现有 Embedding、LLM 等检索方法在选择有情感支持价值的记忆时仍然存在明显不足。
