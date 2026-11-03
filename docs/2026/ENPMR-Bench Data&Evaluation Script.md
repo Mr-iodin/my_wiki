@@ -44,7 +44,7 @@
 
 ## 1、数据集
 
-#### 1.1 整体规模
+### 1.1 整体规模
 
 根据 README 中提供的统计信息：
 
@@ -61,9 +61,7 @@
 | 原始完整 Baseline 代码 | 当前仓库未见                               |
 | 原始评测脚本           | 当前仓库未见                               |
 
-
-
-#### 1.2 JSON 文件的内部结构
+### 1.2 JSON 文件的内部结构
 
 数据集结构：
 
@@ -305,9 +303,7 @@ memory = persona["memory_bank"][memory_id]
 
 另外，映射是每个 Persona 内部独立的，不能把不同用户的 memory ID 当作全局唯一编号。
 
-
-
-#### 1.3 数据集到底有多少种记忆？分布如何？
+### 1.3 数据集到底有多少种记忆？分布如何？
 
 进一步对完整 JSON 做了统计，这里需要区分两个概念：
 
@@ -400,10 +396,356 @@ memory = persona["memory_bank"][memory_id]
 
 系统最终没有简单地召回一条与「设计」语义相似的记忆，而是召回了一个曾经给予她支持和认可的合作伙伴。
 
-为什么这条记忆有价值？
+为什么这条记忆有价值？因为它能为当前困境提供真实的社会支持证据。
 
-因为它能为当前困境提供真实的社会支持证据。
+如果只使用普通向量检索，可能会找到其他设计项目、设计技能或者作品集相关记忆，但不一定能找到真正具有支持价值的人际关系记忆。这就是 ENPMR-Bench 想要考察的能力。
 
-如果只使用普通向量检索，可能会找到其他设计项目、设计技能或者作品集相关记忆，但不一定能找到真正具有支持价值的人际关系记忆。
 
-这正是 ENPMR-Bench 想要考察的能力。
+
+## 2、测评标准
+
+原论文用于评估记忆检索的核心指标如下：
+
+| 指标          | 核心函数                   | 评价内容                 |
+| ------------- | -------------------------- | ------------------------ |
+| Recall@K      | `recall_at_k()`            | 正确记忆是否进入前 K     |
+| Precision@K   | `precision_at_k()`         | 前 K 中正确记忆的比例    |
+| MRR           | `reciprocal_rank()`        | 第一条正确记忆排第几     |
+| nDCG@K        | `ndcg_at_k()`              | 正确记忆的排序位置       |
+| TMR           | `memory_type_match_rate()` | 召回类型是否符合情感需求 |
+| Empathy Score | `empathy_score()`          | 回复的共情表现           |
+
+##### 2.1 记忆检索指标
+
+这里假设：
+
+```python
+gold_ids = {"m3"}  # 数据集标注的正确记忆
+pred_ids = ["m2", "m3", "m5", "m1", "m4"]
+```
+
+`gold_ids` 使用集合，支持将来扩展到多个正确记忆。`pred_ids` 是模型返回的排名列表。假设不存在重复记忆 ID。
+
+* `Recall@K`
+
+​       公式：
+$$
+Recall@K=\frac{|TopK\cap Relevant|}{|Relevant|}
+$$
+
+```python
+def recall_at_k(gold_ids, pred_ids, k):
+    if not gold_ids:
+        raise ValueError("gold_ids 不能为空")
+    top_k = set(pred_ids[:k])
+    return len(top_k & set(gold_ids)) / len(gold_ids)
+```
+
+如果正确记忆 `m3` 在前 5 条中，Recall@5 = 1.0；否则为 0（单一正确记忆场景）。
+
+* `Precision@K`
+
+​       公式：
+$$
+Precision@K=\frac{|TopK\cap Relevant|}{K}
+$$
+如果前 5 条记忆中有 1 条正确，Precision@5 = 0.2。
+
+* `MRR（Mean Reciprocal Rank）`
+
+​        首先计算每个样本的倒数排名：
+$$
+RR=\frac{1}{rank_{\text{first relevant}}}
+$$
+然后在所有样本上取平均。
+
+```python
+def reciprocal_rank(gold_ids, pred_ids):
+    gold = set(gold_ids)
+    for rank, memory_id in enumerate(pred_ids, start=1):
+        if memory_id in gold:
+            return 1.0 / rank
+    return 0.0
+```
+
+例如正确记忆位于第二名，RR = 0.5。对 100 个样本的 RR 求平均，才是 MRR。
+
+*  `nDCG@K`
+
+公式：
+$$
+nDCG@K=\frac{DCG@K}{IDCG@K}
+$$
+其中二值相关性下：
+$$
+DCG@K=\sum_{i=1}^{K}\frac{rel_i}{\log_2(i+1)}
+$$
+
+```python
+
+import math
+
+def ndcg_at_k(gold_ids, pred_ids, k):
+    gold = set(gold_ids)
+    if not gold:
+        raise ValueError("gold_ids 不能为空")
+
+    dcg = sum(
+        1.0 / math.log2(rank + 1)
+        for rank, memory_id
+        in enumerate(pred_ids[:k], start=1)
+        if memory_id in gold
+    )
+
+    ideal_hits = min(k, len(gold))
+    idcg = sum(
+        1.0 / math.log2(rank + 1)
+        for rank in range(1, ideal_hits + 1)
+    )
+
+    return dcg / idcg
+```
+
+这是二值相关性版本。如果后续给记忆标注 0～3 级的支持效用，可以换成分级相关性 nDCG。
+
+* `TMR（记忆类型匹配率）`
+
+根据原论文的，四种需求与记忆类型映射如下。
+
+```python
+
+NEED_MEMORY_MAP = {
+    "physiological": {"preference"},
+    "love_belonging": {"relationship"},
+    "esteem": {"highlight", "relationship"},
+    "self_actualization": {
+        "goal", "power", "highlight"
+    }
+}
+
+def memory_type_match_rate(samples):
+    """
+    samples:
+    [
+      {
+        "need": "esteem",
+        "pred_memory_type": "highlight"
+      }
+    ]
+    """
+    if not samples:
+        raise ValueError("samples 不能为空")
+
+    matches = []
+    for sample in samples:
+        need = sample["need"]
+        mem_type = sample["pred_memory_type"]
+
+        if need not in NEED_MEMORY_MAP:
+            raise ValueError(f"未知需求类型: {need}")
+
+        matches.append(
+            int(mem_type in NEED_MEMORY_MAP[need])
+        )
+
+    return sum(matches) / len(matches)
+
+```
+
+调用：
+
+```python
+samples = [
+    {"need": "esteem",
+     "pred_memory_type": "highlight"},
+    {"need": "love_belonging",
+     "pred_memory_type": "relationship"},
+    {"need": "physiological",
+     "pred_memory_type": "goal"}
+]
+
+print(memory_type_match_rate(samples))
+```
+
+* `Empathy Score（共情质量）`
+
+论文采用 GPT-4o 作为评价模型，temperature=0，对生成回复的 Fluency、Humanoid、Informativeness 和 Empathy 四个维度分别进行 1～5 分评分。
+
+```python
+
+import json
+from statistics import mean
+
+def evaluate_response(need, history, response, judge_fn):
+    """
+    judge_fn(prompt) -> JSON 字符串
+    应由外部 LLM API 或本地模型实现。
+    """
+    prompt = f"""
+你是一名情感支持对话质量评估员。
+请依据以下信息评价 AI 回复。
+
+用户情感需求: {need}
+对话历史: {history}
+AI 回复: {response}
+
+从用户视角评估以下四个维度：
+1. Coherence: 回复是否流畅且逻辑连贯
+2. Humanoid: 是否具有自然的人类对话特点
+3. Informativeness: 是否合理利用个人记忆
+4. Empathy: 是否理解并回应用户情感需求
+
+每个维度给出 1-5 的整数评分。
+仅输出 JSON：
+{{
+ "Coherence": 1,
+ "Humanoid": 1,
+ "Informativeness": 1,
+ "Empathy": 1
+}}
+"""
+    result = json.loads(judge_fn(prompt))
+
+    keys = [
+        "Coherence", "Humanoid",
+        "Informativeness", "Empathy"
+    ]
+
+    scores = {}
+    for key in keys:
+        value = result[key]
+        if type(value) is not int or not 1 <= value <= 5:
+            raise ValueError(f"{key} 评分无效")
+        scores[key] = value
+
+    return scores
+
+def empathy_score(evaluation_results):
+    return mean(
+        item["Empathy"]
+        for item in evaluation_results
+    )
+
+```
+
+⚠️ GPT 评分和真实用户获得情感支持的效果并不完全等价，正式论文最好配合人工评价。
+
+
+
+### 2.2 评测代码（待验证）
+
+```python
+
+import math
+from statistics import mean
+
+KS = (1, 3, 5, 10)
+
+def evaluate_one(gold_ids, pred_ids, k):
+    gold = set(gold_ids)
+    if not gold:
+        raise ValueError("gold_ids 不能为空")
+    if k <= 0:
+        raise ValueError("k 必须大于零")
+    if len(pred_ids) != len(set(pred_ids)):
+        raise ValueError("pred_ids 包含重复 ID")
+
+    top_k = pred_ids[:k]
+    hits = len(gold & set(top_k))
+
+    recall = hits / len(gold)
+    precision = hits / k
+
+    dcg = sum(
+        1 / math.log2(i + 1)
+        for i, mid in enumerate(top_k, start=1)
+        if mid in gold
+    )
+    idcg = sum(
+        1 / math.log2(i + 1)
+        for i in range(1, min(k, len(gold)) + 1)
+    )
+
+    return {
+        "Recall": recall,
+        "Precision": precision,
+        "nDCG": dcg / idcg
+    }
+
+def reciprocal_rank(gold_ids, pred_ids):
+    gold = set(gold_ids)
+    for i, mid in enumerate(pred_ids, start=1):
+        if mid in gold:
+            return 1 / i
+    return 0.0
+
+def evaluate_dataset(samples):
+    if not samples:
+        raise ValueError("samples 不能为空")
+
+    results = {}
+
+    for k in KS:
+        scores = [
+            evaluate_one(
+                s["gold_ids"], s["pred_ids"], k
+            )
+            for s in samples
+        ]
+        for name in ("Recall", "Precision", "nDCG"):
+            results[f"{name}@{k}"] = mean(
+                s[name] for s in scores
+            )
+
+    results["MRR"] = mean(
+        reciprocal_rank(
+            s["gold_ids"], s["pred_ids"]
+        )
+        for s in samples
+    )
+
+    return results
+
+if __name__ == "__main__":
+    samples = [
+        {
+            "gold_ids": ["m3"],
+            "pred_ids": [
+                "m2", "m3", "m5", "m1",
+                "m4", "m6", "m7", "m8",
+                "m9", "m10"
+            ]
+        },
+        {
+            "gold_ids": ["m1"],
+            "pred_ids": [
+                "m1", "m2", "m3", "m4",
+                "m5", "m6", "m7", "m8",
+                "m9", "m10"
+            ]
+        }
+    ]
+
+    scores = evaluate_dataset(samples)
+
+    for name, value in scores.items():
+        print(f"{name:15s}: {value:.4f}")
+
+```
+
+
+
+### 2.3 运行结果
+
+| 指标          |        |
+| ------------- | ------ |
+| Recall@1      | 0.5000 |
+| Recall@3/5/10 | 1.0000 |
+| Precision@1   | 0.5000 |
+| Precision@3   | 0.3333 |
+| Precision@5   | 0.2000 |
+| Precision@10  | 0.1000 |
+| nDCG@1        | 0.5000 |
+| nDCG@3/5/10   | 0.8155 |
+| MRR           | 0.7500 |
+|               | 0.6666 |
