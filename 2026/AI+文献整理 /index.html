@@ -3114,62 +3114,62 @@
 <table>
 <thead>
 <tr>
-<th>工作</th>
-<th>类型与发表信息</th>
-<th>核心设计</th>
-<th>代码公开状态与许可证</th>
-<th>官方文档与资源</th>
-<th></th>
+<th><strong>工作</strong></th>
+<th><strong>类型与发表信息</strong></th>
+<th><strong>核心设计</strong></th>
+<th><strong>代码公开状态与许可证</strong></th>
+<th><strong>精读</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>LongTutor</strong></td>
-<td>评测基准 · ACL 2026 主会长文</td>
-<td>基于形成性评价理论，用专家标注的真实学习日志构建三项递进任务：<strong>历史证据获取 → 知识状态诊断 → 自适应教学行动</strong>。配套生成器–验证器管线，用于自动扩展评测样本。</td>
-<td><strong>代码和数据均公开。</strong> 提供历史特征构建、测试样本生成、推理和评测脚本。论文表 5 将<strong>评测脚本</strong>标为 MIT，数据标为 CC BY 4.0。 (<a href="https://github.com/liano3/LongTutor?utm_source=chatgpt.com">github.com</a>)</td>
-<td><a href="https://aclanthology.org/2026.acl-long.1371/">论文</a> · <a href="https://github.com/liano3/LongTutor">代码与数据</a></td>
-<td></td>
+<td>长期个性化辅导基准 · <strong>ACL 2026 主会长文</strong></td>
+<td>基于真实学生练习日志，按<strong>历史证据获取 → 知识状态诊断 → 自适应教学行动</strong>三步评测。用专家标注构建基准，并用生成器–验证器管线扩展样本。 (<a href="https://aclanthology.org/2026.acl-long.1371/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
+<td><strong>代码和数据公开。</strong> 提供历史特征构建、样本生成、推理和评测脚本。论文将<strong>评测脚本</strong>标为 MIT，数据标为 CC BY 4.0。<a href="https://github.com/liano3/LongTutor">代码与数据</a> (<a href="https://github.com/liano3/LongTutor?utm_source=chatgpt.com">github.com</a>)</td>
+<td>-</td>
 </tr>
 <tr>
-<td><strong>LEAP</strong></td>
-<td>辅导规划系统 · AAAI 2026 主会</td>
-<td>用认知状态记忆跟踪学生跨题学习进度，结合直接规划与深思熟虑推理，在教学质量和推理开销之间取得平衡。配套 <strong>LEAD</strong> 数据集由 PTA 真实学生提交记录和模拟师生对话构建。</td>
-<td><strong>代码和 LEAD 数据均公开。</strong> 仓库包含认知状态建模、规划和训练代码，以及 <code>LEAD/cpp.json</code>。未见明确的代码许可证。 (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/36984?utm_source=chatgpt.com">ojs.aaai.org</a>)</td>
-<td><a href="https://ojs.aaai.org/index.php/AAAI/article/view/36984">论文</a> · <a href="https://github.com/PlayerDza/LEAP">代码与数据</a></td>
-<td></td>
+<td><strong>LEAP／LEAD</strong></td>
+<td>长期辅导规划系统与配套数据集 · <strong>AAAI 2026 主会</strong></td>
+<td>从过往辅导对话中提取认知状态，跟踪学生的<strong>跨题学习进度</strong>，结合直接规划与深度推理生成教学支架。LEAD 用 PTA 的真实代码提交记录作为基础，再模拟师生对话。 (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/36984?utm_source=chatgpt.com">ojs.aaai.org</a>)</td>
+<td><strong>代码和部分数据公开。</strong> 官方仓库包含认知建模、规划、训练代码及 <code>LEAD/cpp.json</code>，未见代码许可证。<a href="https://github.com/PlayerDza/LEAP">代码与数据</a> (<a href="https://github.com/PlayerDza/LEAP?utm_source=chatgpt.com">github.com</a>)</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>ScaffoldLM</strong></td>
-<td>辅导框架 · ACL 2026 主会长文</td>
-<td>以分步教学计划为骨架，每轮推断学习者认知状态、判断当前步骤目标是否达成，再选择辅导动作并更新记忆。</td>
-<td><strong>代码公开。</strong> 提供数据合成、模型服务和训练脚本。仓库 README 标注 <strong>CC BY 4.0</strong>。 (<a href="https://aclanthology.org/2026.acl-long.325/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
-<td><a href="https://aclanthology.org/2026.acl-long.325/">论文</a> · <a href="https://github.com/BNU-ERC-ITEA/ScaffoldLM">代码</a> · <a href="https://huggingface.co/ffffddddsss/scaffoldLM-7B">模型</a></td>
-<td></td>
+<td>多轮数学辅导框架 · <strong>ACL 2026 主会长文</strong></td>
+<td>先生成分步教学计划，再在<strong>单次辅导会话内</strong>逐轮评估学生状态、判断当前步骤是否达成，并据此更新记忆和选择下一步辅导动作。 (<a href="https://aclanthology.org/2026.acl-long.325/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
+<td><strong>代码公开。</strong> 提供数据合成、模型服务和训练脚本，README 标注 <strong>CC BY 4.0</strong>。<a href="https://github.com/BNU-ERC-ITEA/ScaffoldLM">代码</a> · <a href="https://huggingface.co/ffffddddsss/scaffoldLM-7B">模型</a> (<a href="https://github.com/BNU-ERC-ITEA/ScaffoldLM?utm_source=chatgpt.com">github.com</a>)</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>Who Am I?</strong></td>
-<td>学生模拟框架 · EMNLP 2026 主会</td>
-<td>将学生的历史答题和辅导对话压缩为包含<strong>知识状态与行为倾向</strong>的文本画像。模拟器根据画像预测学生话语，再以模拟表现为奖励，用 GRPO 优化画像生成器。</td>
-<td><strong>代码公开，论文数据尚待发布。</strong> 提供学生模拟、画像训练和评测代码。README 表示数据完成去标识化后发布。未见明确的代码许可证。 (<a href="https://aclanthology.org/2026.emnlp-main.415.pdf?utm_source=chatgpt.com">aclanthology.org</a>)</td>
-<td><a href="https://aclanthology.org/2026.emnlp-main.415/">论文</a> · <a href="https://github.com/umass-ml4ed/dialogue_student_sim">代码</a></td>
-<td></td>
+<td>历史感知学生模拟框架 · <strong>EMNLP 2026 主会</strong></td>
+<td>将学生过去的<strong>答题与辅导对话</strong>压缩为包含知识状态和行为倾向的文本画像。模拟器用画像预测后续学生话语，再以模拟表现为奖励，用 GRPO 优化画像生成器。 (<a href="https://aclanthology.org/2026.emnlp-main.415/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
+<td><strong>代码公开，论文数据尚待发布。</strong> 提供画像训练、学生模拟和评测代码。README 表示数据完成去标识化后发布，未见代码许可证。<a href="https://github.com/umass-ml4ed/dialogue_student_sim">代码</a> (<a href="https://github.com/umass-ml4ed/dialogue_student_sim?utm_source=chatgpt.com">github.com</a>)</td>
+<td>-</td>
 </tr>
 <tr>
 <td><strong>EduAdapt</strong></td>
-<td>评测基准 · EMNLP 2025 主会</td>
-<td>面向 K–12 科学问答，提供约 <strong>4.8 万条带年级标签的 QA 样本</strong>，覆盖 1–12 年级和 9 个科学科目，按四个学段评估模型的年级适配性。</td>
-<td><strong>代码暂时移除，数据公开。</strong> 论文声明公开了代码和数据，但官方 README 说明更新期间已移除代码。Hugging Face <strong>数据集</strong>标注 <strong>Apache 2.0</strong>。 (<a href="https://aclanthology.org/2025.emnlp-main.1736/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
-<td><a href="https://aclanthology.org/2025.emnlp-main.1736/">论文</a> · <a href="https://github.com/NaumanNaeem/EduAdapt/blob/main/README.md">仓库说明</a> · <a href="https://huggingface.co/datasets/Numaanmbz/EduAdapt">数据集</a></td>
-<td></td>
+<td>年级适应性问答基准 · <strong>EMNLP 2025 主会</strong></td>
+<td>提供约 <strong>4.8 万条</strong>带年级标签的科学问答，覆盖 1–12 年级和 9 个科学科目。用选择题考察答题准确率，用开放题考察回答的年级适配性。 (<a href="https://aclanthology.org/2025.emnlp-main.1736/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
+<td><strong>代码暂时移除，数据公开。</strong> 官方仓库目前仅有 README，作者说明更新期间移除了代码。Hugging Face 数据页标注 <strong>Apache 2.0</strong>。<a href="https://github.com/NaumanNaeem/EduAdapt/blob/main/README.md">仓库说明</a> · <a href="https://huggingface.co/datasets/Numaanmbz/EduAdapt">数据</a> (<a href="https://huggingface.co/datasets/Numaanmbz/EduAdapt?utm_source=chatgpt.com">huggingface.co</a>)</td>
+<td>https://mr-iodin.github.io/my_wiki/2026/EDUADAPT_%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB/</td>
 </tr>
 <tr>
 <td><strong>ELI-Why</strong></td>
-<td>评测基准 · Findings of ACL 2025</td>
-<td>收录约 <strong>1.34 万个「为什么」问题</strong>，面向小学、高中和研究生三个教育层级。从教育者视角评估解释与目标层级的匹配度，从学习者视角评估解释是否满足其信息需求。</td>
-<td><strong>部分评测与分析代码公开，数据公开。</strong> 官方仓库提供可读性和相似度等分析脚本。未见明确的代码许可证。 (<a href="https://aclanthology.org/2025.findings-acl.1306/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
-<td><a href="https://aclanthology.org/2025.findings-acl.1306/">论文</a> · <a href="https://inklab.usc.edu/eli-why/">项目页</a> · <a href="https://github.com/INK-USC/ELI-Why">代码</a> · <a href="https://huggingface.co/datasets/INK-USC/eli-why">数据集</a></td>
-<td></td>
+<td>教学解释效用基准 · <strong>Findings of ACL 2025</strong></td>
+<td>收录约 <strong>1.34 万个「为什么」问题</strong>。通过两项人类研究，分别考察教育者能否识别解释的目标教育层级，以及学习者认为解释是否满足自己的信息需求。 (<a href="https://aclanthology.org/2025.findings-acl.1306/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
+<td><strong>部分分析脚本和数据公开。</strong> 提供可读性、相似度等分析脚本，未见代码许可证。<a href="https://github.com/INK-USC/ELI-Why">代码</a> · <a href="https://huggingface.co/datasets/INK-USC/eli-why">数据</a> (<a href="https://github.com/INK-USC/ELI-Why?utm_source=chatgpt.com">github.com</a>)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>MathBuddy</strong></td>
+<td>多模态情感感知数学辅导系统 · <strong>EMNLP 2025 System Demonstrations</strong></td>
+<td>融合学生当轮话语与近期面部表情，估计<strong>当前情绪状态</strong>，再在挑战和激励两种辅导策略之间切换。 (<a href="https://aclanthology.org/2025.emnlp-demos.63/?utm_source=chatgpt.com">aclanthology.org</a>)</td>
+<td><strong>代码和标注数据公开。</strong> 仓库含前后端和情绪标注。代码采用 <strong>Apache 2.0</strong>，数据采用 <strong>CC BY-SA 4.0</strong>。<a href="https://github.com/ITU-NLP/MathBuddy">代码与数据</a> (<a href="https://github.com/ITU-NLP/MathBuddy?utm_source=chatgpt.com">GitHub</a>)</td>
+<td>-</td>
 </tr>
 </tbody>
 </table>
@@ -3414,36 +3414,6 @@
 </ul>
 <p><strong>与之前关注的工作关系</strong>：MathBuddy和<strong>ScaffoldLM</strong>、<strong>Who Am I?</strong> 都涉及数学辅导中的学生建模，但维度不同。ScaffoldLM建模的是<strong>认知状态</strong>（步骤是否达成、概念是否理解），Who Am I?建模的是<strong>行为倾向</strong>（遇到困难时怎么说话、求助频率），而MathBuddy建模的是<strong>情感状态</strong>（正/负/中性）并将它作为教学策略的<strong>直接切换开关</strong>。三者构成互补：一个理想的辅导系统可能需要同时追踪认知、行为和情感三条线。MathBuddy的“双模态融合 + 冲突裁决”设计，为如何在实时对话系统中可靠地获取情感信号提供了一个工程上可落地的参考方案。</p>
 <hr />
-<p><strong>MathBuddy</strong>，一个<strong>情感感知的多模态数学辅导系统</strong>，核心创新在于将学生的<strong>文本情绪</strong>与<strong>面部表情</strong>实时融合，动态映射到教学策略，让LLM辅导者从“只讲题”变为“看脸色教学”。</p>
-<p><code># EMNLP 2025 (System Demonstrations)</code></p>
-<blockquote>
-<p>MathBuddy, an emotionally aware LLM-powered Math Tutor, which dynamically models the student‘s emotions from both conversational text and facial expressions, aggregates them into a unified affective state, and maps it to relevant pedagogical strategies—challenging a positive/neutral student while motivating a negative one.</p>
-<p><strong>重点研究：</strong> 现有LLM辅导系统在教学内容上不断进步，却普遍缺乏<strong>情感智能</strong>，将所有学习者一视同仁，忽视其情绪状态。在数学这类学习者焦虑被充分记录的主题中，这种忽视会直接导致参与度下降和挫败感加剧。如何让AI辅导者“看见”学生的情绪，并据此调整怎么教？</p>
-</blockquote>
-<ul>
-<li>PDF：https://aclanthology.org/2025.emnlp-demos.pdf</li>
-<li>ACL Anthology：https://aclanthology.org/2025.emnlp-demos/</li>
-<li>arXiv：https://arxiv.org/abs/2508.19993</li>
-<li>DOI：10.18653/v1/2025.emnlp-demos.6319</li>
-<li>GitHub：https://github.com/ITU-NLP/MathBuddy</li>
-</ul>
-<p>MathBuddy的核心洞察是：教育心理学早已证实，<strong>负面情绪（困惑、挫败）会直接抑制解题能力和动机，而正面情绪（投入、好奇）与学习增益正相关</strong>。但现有的LLM辅导系统把情绪信号完全丢弃了。MathBuddy要做的，是把人类教师“看学生脸色行事”的本能，工程化为一个可运行的多模态系统。</p>
-<p>同时，构建了一套以<strong>双模态情绪融合 + 策略映射</strong>为核心的框架：</p>
-<ul>
-<li><strong>核心能力定义</strong>：MathBuddy将辅导建模为<strong>情绪条件化的对话生成</strong>。给定学生的上一轮话语和面部表情，系统先提取并聚合情绪状态，再以此为条件提示LLM辅导者生成教学回应。</li>
-<li><strong>文本情绪识别</strong>：由于缺乏现成的学生-辅导者情绪标注数据，作者对<strong>MathDial-Bridge</strong>数据集的224条学生话语进行了人工标注，将情绪建模为<strong>多标签分类</strong>（Boredom / Engagement / Neutral），并附带0-2的强度极性分数。微调后的BERT模型在测试集上达到<strong>61.8%准确率、57.9% F1</strong>。</li>
-<li><strong>面部情绪识别</strong>：使用<strong>face-api.js</strong>在浏览器端实时检测面部表情，可识别Happy、Sad、Angry、Surprised等7类情绪。在自建测试集上报告<strong>76%准确率、71% F1</strong>。面部情绪样本按<strong>半衰期120秒</strong>的衰减函数进行时间聚合，赋予近期表情更高权重。</li>
-<li><strong>多模态情绪聚合</strong>：两种模态的情绪首先映射到<strong>Positive / Neutral / Negative</strong>三个原始类别。聚合规则的关键设计是：<strong>Positive和Negative始终优先于Neutral</strong>；若两者冲突，以<strong>置信度</strong>作为次级裁决标准。例如文本判Positive（置信度50%）与面部判Negative（置信度70%）冲突时，系统选择Negative。系统明确假设：<strong>任何非中性的信号都意味着“中性不成立”</strong>，从而更积极地触发策略调整。</li>
-<li><strong>情感感知教学策略映射</strong>：聚合后的情绪被映射到两条教学路径——<strong>Positive或Neutral → 挑战（Challenge）</strong> 学生；<strong>Negative → 激励（Motivate）</strong> 学生。这两条路径通过提示工程注入LLM Tutor，使回应在教学内容之外携带情感适配性。</li>
-</ul>
-<p><strong>🌟 主要实验结果</strong></p>
-<ul>
-<li><strong>Win Rate大幅提升23个点</strong>：在用户研究中，MathBuddy的情感感知回应相比基线取得了<strong>23个百分点的win rate增益</strong>，这是该系统核心假设——情绪建模能提升教学效能——最直接的证据。</li>
-<li><strong>八维教学评估全面改善</strong>：在基于<strong>Maurya et al. (2025)</strong> 框架的<strong>八个教学维度</strong>上进行自动评估，整体<strong>DAMR分数提升约3个点</strong>。这说明情感适配的收益不局限于“让学生感觉好”，而是渗透到了多个可测量的教学质量维度中。</li>
-<li><strong>首个情感感知LLM辅导系统</strong>：作者将MathBuddy定位为<strong>第一个</strong>基于教育理论、并根据学生情感状态自适应调整的LLM辅导系统，填补了“教学内容强、情感智能缺”这一结构性空白。</li>
-<li><strong>配套资源开源</strong>：系统代码、标注数据集和demo视频均已公开，为后续情感感知教育系统的研究提供了可复现的基础。</li>
-</ul>
-<p><strong>与之前关注的工作关系</strong>：MathBuddy和<strong>ScaffoldLM</strong>、<strong>Who Am I?</strong> 都涉及数学辅导中的学生建模，但维度不同。ScaffoldLM建模的是<strong>认知状态</strong>（步骤是否达成、概念是否理解），Who Am I?建模的是<strong>行为倾向</strong>（遇到困难时怎么说话、求助频率），而MathBuddy建模的是<strong>情感状态</strong>（正/负/中性）并将它作为教学策略的<strong>直接切换开关</strong>。三者构成互补：一个理想的辅导系统可能需要同时追踪认知、行为和情感三条线。MathBuddy的“双模态融合 + 冲突裁决”设计，为如何在实时对话系统中可靠地获取情感信号提供了一个工程上可落地的参考方案。</p>
 
 
 
