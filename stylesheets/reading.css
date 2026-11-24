@@ -69,6 +69,38 @@
   max-width: 100%;
 }
 
+.md-typeset > p {
+  text-indent: 2em;
+}
+
+.md-typeset > p:has(img) {
+  text-indent: 0;
+}
+
+.md-typeset p img,
+.md-typeset > img,
+.md-typeset figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-typeset table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-typeset .md-typeset__scrollwrap {
+  display: flex;
+  justify-content: safe center;
+}
+
+.md-typeset .md-typeset__scrollwrap .md-typeset__table {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-main .md-content__inner {
     max-width: 860px;
@@ -85,29 +117,7 @@
   }
 }
 
-/* Center media only in the two ENPMR-Bench articles that opt in. */
-.md-typeset .centered-media-page ~ p img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.md-typeset .centered-media-page ~ table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.md-typeset .centered-media-page ~ .md-typeset__scrollwrap {
-  display: flex;
-  justify-content: safe center;
-}
-
-.md-typeset .centered-media-page ~ .md-typeset__scrollwrap .md-typeset__table {
-  flex: 0 1 auto;
-  min-width: 0;
-  max-width: 100%;
-}
-
+/* Keep very wide tables readable in the two ENPMR-Bench articles. */
 .md-typeset .centered-media-page ~ .md-typeset__scrollwrap table {
   table-layout: fixed;
 }
