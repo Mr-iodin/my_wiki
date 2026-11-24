@@ -13,6 +13,33 @@ nav:
        - 2026/Mem0 记忆系统原理.md
        - 2026/EDUADAPT_文献精读.md
 
+  - "记忆与推理 · 论文精读":
+     - 阅读导览: memory-research/index.md
+     - 系统综述: memory-research/00_综述/Agent_Native_Memory_文献精读.md
+     - 筛选历史证据:
+       - 意图分析:
+         - MemGuide: memory-research/01_筛选历史证据/01_意图分析/MemGuide_论文精读.md
+         - MESA: memory-research/01_筛选历史证据/01_意图分析/MESA_论文精读.md
+         - MADial-Bench: memory-research/01_筛选历史证据/01_意图分析/MADial-Bench_论文精读.md
+       - 证据准入与过滤:
+         - Memory Retrieval for Changing Preferences: memory-research/01_筛选历史证据/02_证据准入与过滤/Memory_Retrieval_for_Changing_Preferences_论文精读.md
+         - RUMS: memory-research/01_筛选历史证据/02_证据准入与过滤/RUMS_论文精读.md
+         - MemLoc: memory-research/01_筛选历史证据/02_证据准入与过滤/MemLoc_论文精读.md
+         - SETR: memory-research/01_筛选历史证据/02_证据准入与过滤/SETR_论文精读.md
+         - eRAG: memory-research/01_筛选历史证据/02_证据准入与过滤/eRAG_论文精读.md
+         - ERASER: memory-research/01_筛选历史证据/02_证据准入与过滤/ERASER_论文精读.md
+         - WorkflowExplorer: memory-research/01_筛选历史证据/02_证据准入与过滤/WorkflowExplorer_论文精读.md
+     - 利用证据推理:
+       - 推理器:
+         - PersonaMem: memory-research/02_利用证据推理/01_推理器/PersonaMem_论文精读.md
+         - PRAGMA: memory-research/02_利用证据推理/01_推理器/PRAGMA_论文精读.md
+         - LongTutor: memory-research/02_利用证据推理/01_推理器/LongTutor_论文精读.md
+       - 回答器:
+         - ScaffoldLM: memory-research/02_利用证据推理/02_回答器/ScaffoldLM_论文精读.md
+         - OmniEdu: memory-research/02_利用证据推理/02_回答器/OmniEdu_论文精读.md
+         - EDUADAPT: memory-research/02_利用证据推理/02_回答器/EDUADAPT_文献精读.md
+         - ALCE: memory-research/02_利用证据推理/02_回答器/ALCE_论文精读.md
+
   - "算法":
      - 'STL库':
        - STL库/sort自定义排序.md
